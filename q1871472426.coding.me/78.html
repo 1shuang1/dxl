@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>78天</title>
+	<style>
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		body{
+			background: #fad2eb;
+		}
+		.conter{
+			width: 1224px;
+			margin: 0 auto;
+			position: relative;
+		}
+		header{
+			margin: 20px;
+		}
+		.nav-list{
+			width: 60%;
+			list-style: none;
+			color: white;
+			font-size: 20px;
+			position: relative;
+			z-index: 10;
+			float: left;
+
+		}
+		.nav-list li{
+			float: left;
+			line-height: 50px;
+			padding: 0px 20px 0px;
+			cursor: pointer;
+			
+		}
+		button{
+			position: absolute;
+			width: 35px;
+			height: 22px;
+			top: 15px;
+			left: 200px;
+		}
+		.inp{
+			position: absolute;
+			padding: 2px 0px;
+			top: 14px;
+		}
+		.box{
+			position: relative;
+			float: left;
+			left: 200px;
+		}
+		.but1{
+			width: 50px;
+			height: 20px;
+			left: 20px;
+			display: none;
+		}
+
+		
+		footer{
+			width: 100%;
+			height: 2130px;
+		}
+		footer .left{
+			margin-top: 10px;
+			width: 55%;
+			height: 700px;
+		}
+		footer .left p{
+			width: 650px;
+			margin-left: 40px;
+		}
+		.img1{
+			width: 95%;
+			margin-left: 40px;
+		}
+		.img2{
+			width: 150px;
+			margin-left: 40px;
+			float: left;
+			margin-right: 20px;
+			margin-bottom: 5px;
+		}
+		.xia{
+			display: flex;
+			flex-direction: column;
+			height: 2130px;
+			flex-wrap: wrap;
+		}
+		.right{
+			margin-top: 100px;
+			margin-left: 40px;
+			width: 350px;
+			height: 200px;
+		}
+		.right ul{
+			list-style: none;
+		}
+		.right li{
+			width: 100%;
+			height: 40px;
+			background:#fffcf0;
+			border-bottom: 1px solid #ddd;
+			line-height: 40px;
+		}
+		.right li p{
+			cursor: pointer;
+			margin-left: 10px;
+		}
+		.right li a{
+			cursor: pointer;
+			margin-left: 10px;
+			text-decoration: none;
+			float: left;
+		}
+		@media screen and (max-width: 640px){
+			.conter{
+				width: 90%;
+			}
+			.nav-list{
+				display: none;
+				top: 50px;
+				width: 150px;
+			}
+			.nav-list li{
+				width: 150px;
+				clear: left;
+				background: #000;
+			}
+			.but1{
+				display:block;
+			}
+			.xia{
+				flex-wrap: nowrap;
+				height: 2800px;
+			}
+			.right li{
+				width: 90%;
+			}
+			footer .left{
+				width: 90%;
+			}
+			footer .left p{
+			width: 538px;
+			margin-left: 40px;
+			}
+			.right{
+				margin-top: 100px;
+				margin-left: 40px;
+				width:100%;
+				height: 200px;
+			}
+			footer .left p{
+				width: 100%;
+				margin-left: 40px;
+			}
+			.box{
+				left: 100px;
+			}
+		}
+		.active{
+			display: flex;
+			flex-direction: column;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="conter">
+			<h1 style="font-size: 34px;margin-left: 20px;">秦皇岛盛邦升华</h1>
+			<p style="font-size: 20px;margin-left: 20px;"><b>盛邦升华（秦皇岛）大学生实训实习基地</b></p>
+		</div>
+	</header>
+	<nav>
+		<div class="conter">
+			<div style="background: #000;height: 50px; width: 100%;">
+			<button class="but1">菜单</button>
+			<ul class="nav-list">
+				<li>盛邦主页</li>
+				<li>关于我们</li>
+				<li>盛邦课堂</li>
+				<li>盛邦论坛</li>
+				<li>联系我们</li>
+			</ul>
+			<div class="box"><input type="text" placeholder="搜索内容" class="inp">
+			<button>搜索</button></div>
+			</div>
+		</div>
+	</nav>
+	<footer>
+		<div class="conter xia">
+			<div class="left">
+				<img src="image/响应式素材/images/muji.jpg" alt="" class="img1">
+				<img src="image/响应式素材/images/face01.jpg" alt="" class="img2">
+				<b style="font-size: 25px;">如何才能成为一名真正的前端工程师</b>
+				<p style="font-size: 20px;color: #999;">如何才能成为一名真正的前端工程师如何才能成为一名真正的前端工程师如何才能成为一名真正的前端工程师如何才能成为一名真正的前端工程师如何才能成为一名真正的前端工程师如何才能成为一名真正的前端工程师如何才能成为一名真正的前端工程师如何才能成为一名真正的前端工程师如何才能成为一名真正的前端工程师如何才能成为一名真正的前端工程师如何才能成为一名真正的前端工程师如何才能成为一名真正的前端工程师...</p>
+			</div>
+			<div class="left">
+				<img src="image/响应式素材/images/muji.jpg" alt="" class="img1">
+				<img src="image/响应式素材/images/face02.gif" alt="" class="img2">
+				<b style="font-size: 25px;">母鸡和前端工程师的故事</b>
+				<p style="font-size: 20px;color: #999;">母鸡和前端工程师的故事母鸡和前端工程师的故事母鸡和前端工程师的故事母鸡和前端工程师的故事母鸡和前端工程师的故事母鸡和前端工程师的故事母鸡和前端工程师的故事母鸡和前端工程师的故事母鸡和前端工程师的故事母鸡和前端工程师的故事母鸡和前端工程师的故事母鸡和前端工程师的故事母鸡和前端工程师的故事母鸡和前端工程师的故事母鸡和前端工程师的故事...</p>
+			</div>
+			<div class="left">
+				<img src="image/响应式素材/images/muji.jpg" alt="" class="img1">
+				<img src="image/响应式素材/images/face03.jpg" alt="" class="img2">
+				<b style="font-size: 25px;">好多前端工程师的面试题......</b>
+				<p style="font-size: 20px;color: #999;">好多前端工程师的面试题好多前端工程师的面试题好多前端工程师的面试题好多前端工程师的面试题好多前端工程师的面试题好多前端工程师的面试题好多前端工程师的面试题好多前端工程师的面试题好多前端工程师的面试题好多前端工程师的面试题好多前端工程师的面试题好多前端工程师的面试题好多前端工程师的面试题好多前端工程师的面试题好多前端工程师的面试题...</p>
+			</div>
+			<div class="right">
+				<ul>
+					<li style="background:#deebf7; "><p><b>文章分类</b></p></li>
+					<li><p>最新消息(3)</p></li>
+					<li><p>面试问题(5)</p></li>
+					<li><p>技术博客(11)</p></li>
+					<li><p>教学板块(23)</p></li>
+				</ul>
+			</div>
+			<div class="right">
+				<ul>
+					<li style="background:#deebf7; "><p><b>最新评论</b></p></li>
+					<li style="border: none;"><img src="image/响应式素材/images/face01.jpg" alt="" style="width:30px;float: left;margin-top: 5px;margin-left: 10px; "><a href="###">路飞 &nbsp;</a> <p> 好文章，受益匪浅</p></li>
+					<li style="border: none;"><img src="image/响应式素材/images/face02.gif" alt="" style="width:30px;float: left;margin-top: 5px;margin-left: 10px; "><a href="###">博小易 &nbsp;</a> <p> 好</p></li>
+					<li style="border: none;"><img src="image/响应式素材/images/face03.jpg" alt="" style="width:30px;float: left;margin-top: 5px;margin-left: 10px; "><a href="###">不倒翁 &nbsp;</a> <p> 666</p></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+</body>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		$(function(){
+			$(".but1").click(function(){
+				$(".nav-list").toggleClass("active")
+			})
+		})
+	</script>
+</html>

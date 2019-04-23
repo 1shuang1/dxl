@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>65天</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.rig{
+			text-decoration: none;
+			width: 50px;
+			height: 200px;
+			position: fixed;
+			right: 10px;
+			top: 500px;
+			list-style: none;
+		}
+		.rig li{
+			width: 50px;
+			height: 50px;
+			border-radius: 5px;
+			background: #999;
+			overflow: hidden;
+			margin-top: 10px;
+		}
+		.rig p{
+			transition:all 2s;
+			transform: rotate(90deg);
+			width: 50px;
+			text-align: center;
+			height: 50px;
+			background: red;
+			line-height: 50px;
+			transform-origin: 0% 100%;
+		}
+		.box{
+			margin: 0 auto;
+			margin-top: 100px;
+			width: 70px;
+			height: 70px;
+			background: red;
+			transform: rotate(0deg);
+			transform-origin: 50% 50%;
+			line-height: 70px;
+			text-align: center;
+		}
+		.box:hover{
+			margin: 0 auto;
+			margin-top: 100px;
+			width: 200px;
+			height: 100px;
+			background: green;
+			transform: rotate(360deg);
+			transform-origin: 50% 50%;
+			transition:all 5s;
+			line-height: 100px;
+			text-align: center;
+		}
+		.box1{
+			width: 300px;
+			height: 300px;
+			position: relative;
+			top: 200px;
+			left: 500px;
+			transform: rotateY(0deg);
+			transform-style: preserve-3d; 
+			transition:all 2s;
+			perspective: 1200px;
+		}
+		img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			transform: translateZ(0px);
+		}
+		.img1{
+			transform: translateZ(100px);
+		}
+		.box1:hover{
+			
+			transform: rotateY(90deg);
+		}
+		.box2{
+			width: 300px;
+			height: 300px;
+			position: relative;
+			top: 100px;
+			left: 500px;
+			transform:translate(0px,0px);
+			transform-style: preserve-3d; 
+			transition:all 2s;
+			perspective: 1200px;
+			background: transparent;
+			border: 1px solid red;
+			text-align: center;
+			line-height: 300px;
+			transition:all 1s;
+			overflow: hidden;
+		}
+		.box2 p{
+			background: transparent;
+			position: absolute;
+			top: 0px;
+			width: 300px;
+		}
+		.box2 span{
+			position: absolute;
+			background: #541;
+			width: 300px;
+			height: 300px;
+			display: block;
+			transition:all 3s;
+			top: 300px;
+		}
+		.list{
+			position: fixed;
+			left: -21%;
+			top: 0px;
+			list-style: none;
+			background: blue;
+			width: 20%;
+			height: 100%;
+			transition:all 2s;
+		}
+		.list li{
+			width: 90%;
+			height: 30px;
+			margin-top: 10px;
+			background: green;
+			text-align: center;
+			line-height: 30px;
+			margin-left: 8px;
+		}
+		.list .xia{
+			margin-top: 200px;
+		}
+		.list .you{
+			background:#999;
+			width: 9px;
+			height: 9px;
+			position: absolute;
+			right: -5px;
+			top: -10px;
+		}
+		button{
+			position: fixed;
+			top: 0px;
+		}
+	</style>
+</head>
+<body>
+	<button>open</button>
+	<div class="box">测试文字</div>
+	<div class="box2">
+		<span></span>
+		<p>测试文字</p>
+		
+	</div>
+	<div class="box1">
+		<img src="image/变形练习1/2D多照片墙/2D多照片墙/img/3.jpg" alt="" class="img1">
+		<img src="image/变形练习1/2D多照片墙/2D多照片墙/img/3.jpg" alt="">
+	</div>
+	<ul class="rig">
+		<Li><p>苹果</p></Li>
+		<Li><p>皇冠</p></Li>
+		<Li><p>剪刀</p></Li>
+	</ul>
+	<ul class="list">
+		<li class="you"></li>
+		<li class="xia">百度</li>
+		<li>阿里</li>
+		<li>网易</li>
+		<li>搜狐</li>
+		<li>腾讯</li>
+	</ul>
+</body>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		$(function(){
+			$(".rig li").mouseenter(function(){
+				$(this).find("p").css("transform","rotate3d(0,0,1,0deg)")
+			}).mouseleave(function(){
+				$(this).find("p").css({"transform":"rotate3d(0,0,1,90deg)"})
+			})
+			$(".box2").mouseenter(function(){
+				$(this).find("span").css("top","0px")
+			}).mouseleave(function(){
+				$(this).find("span").css({"top":"300px"})
+			})
+			$(".you").click(function(){
+				$(".list").css("left","-21%")
+			})
+			$("button").click(function(){
+				$(".list").css("left","0%")
+			})
+		},1000)
+	</script>
+</html>

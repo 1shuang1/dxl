@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第二十八天</title>
+	<style>
+		input{
+			width: 30px;
+		}
+	</style>
+</head>
+<body>
+	<button class="sub">-</button>
+	<input type="text" value="0" class="txt">
+	<button class="add">+</button>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		var num = Number($(".txt").val());
+		$("button").click(function(){
+			if ($(this).attr("class") == "add" ) {
+				 num ++ ;
+			}else{
+				num --;
+				if (num < 0) {
+					num = 0;
+				}
+			}
+		$(".txt").val(num);
+		})
+	</script>
+</body>
+</html>

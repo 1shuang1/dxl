@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第四十三天</title>
+	<link rel="stylesheet" type="text/css" href="../font/font_4wgw4yu743gqr529/iconfont.css">
+	<style>
+		ul{
+			position: fixed;
+			right: 0px;
+			top: 200px;
+			list-style: none;
+		}
+		li{
+			border-radius: 10%;
+			margin-top: 1px;
+			position: relative;
+			cursor: pointer;
+			background: #999;
+			color: white;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+		}
+		li:hover{
+			background: red;
+		}
+		span{
+			border-radius: 10%;
+			opacity: 0;
+			background: red;
+			width: 70px;
+			height: 40px;
+			color: white;
+			position: absolute;
+			right: 80px;
+			top:0px;
+			font-size: 12px;
+		}
+		p{
+			border-radius: 10%;
+			display: none;
+			background: red;
+			width: 70px;
+			height: 40px;
+			color: white;
+			position: absolute;
+			right: -40px;
+			top:-12px;
+			font-size: 12px;
+			z-index:1;
+		}
+		.iconfont{
+			border-radius: 10%;
+			display: block;
+			position: relative;
+			width: 40px;
+			height: 40px;
+			background: #999;
+			z-index: 2;
+		}
+		.iconfont:hover{
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>
+			<i class="iconfont icon-xin"></i>
+			<span>我的关注</span>
+		</li>
+		<li>
+			<i class="iconfont icon-wodexiaoxi"></i>
+			<span>我的关注</span>
+		</li>
+		<li>
+			<i class="iconfont icon-wodezuji"></i>
+			<span>我的关注</span>
+		</li>
+		<li>
+			<i class="iconfont icon-ren"></i>
+			<span>我的关注</span>
+		</li>
+		<li>
+			<i class="iconfont icon-zixun"></i>
+			<span>我的关注</span>
+		</li>
+		<li>
+			<i class="iconfont icon-qicheqianlian-"></i>
+			<span>我的关注</span>
+		</li>
+		<li>
+			<i class="iconfont icon-xin"></i>
+			<p>我的关注</p>
+		</li>
+		<li>
+			<i class="iconfont icon-wodexiaoxi"></i>
+			<p>我的关注</p>
+		</li>
+		<li>
+			<i class="iconfont icon-wodezuji"></i>
+			<p>我的关注</p>
+		</li>
+		<li>
+			<i class="iconfont icon-ren"></i>
+			<p>我的关注</p>
+		</li>
+		<li>
+			<i class="iconfont icon-zixun"></i>
+			<p>我的关注</p>
+		</li>
+		<li>
+			<i class="iconfont icon-qicheqianlian-"></i>
+			<p>我的关注</p>
+		</li>
+	</ul>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	<script>
+		$("li").mouseenter(function(){
+				$(this).find("span").show().stop().animate({"right":"40px","opacity":"1"},1000).css({"background":"red"});
+			}).mouseleave(function(){
+				$(this).find("span").stop().animate({"right":"80px","opacity":"0"},1000,function(){
+					$(this).hide();
+				}).css({"background":"#999"});
+			})
+		$("li").mouseenter(function(){
+				$(this).find("p").show().stop().animate({"right":"40px"},500).css({"background":"red"});
+			}).mouseleave(function(){
+				$(this).find("p").stop().animate({"right":"-40px"},500).css({"background":"#999"});
+			})
+	</script>
+</body>
+</html>

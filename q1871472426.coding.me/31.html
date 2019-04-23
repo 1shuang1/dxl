@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第三十一天</title>
+</head>
+<style>
+	.box{
+		background: #336699;
+		width: 100px;
+		height: 100px;
+	}
+</style>
+<body>
+	<div class="box"></div>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		$(".box").click(function(){
+			$(".box").animate({marginLeft:500,width:300,height:300},1000);
+			$(".box").animate({marginLeft:500,width:100,height:100},1000);
+			$(".box").animate({marginLeft:0,width:100,height:100},1000);
+		})
+		
+	</script>
+</body>
+</html>

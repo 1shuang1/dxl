@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>82天</title>
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+			background-color: yellow;
+			transition:all 5s;
+		}
+		button{}
+	</style>
+</head>
+<body>
+	<!-- <p onclick="alert('一刀999');">点击我</p> -->
+<!-- 	<img src="image/狗爷.gif" alt="" onclick="alert('狗爷带你浪');"> -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+			// var x=(80+76+34)/3;
+			// console.log("小辉的平均分为"+x+"元");
+			// var y=(1000*0.08)+((1000*0.08+1000)*0.08)+(((1000*0.08+1000)*0.08+1000*0.08+1000)*0.08)+1000;
+			// console.log("小磊在银行三年后的银行存款为"+y+"元");
+			// var w=8000-((8000-5000)*0.1)
+			// console.log("金峰实发工资为"+w+"元");
+
+			// var a = 3;// number 数字类型
+			// var b = null;// object 复合类型
+			// var c = "Hello!";// string 字符串类型
+			// var d = true;// boolean 布尔类型
+			// var e;// undefined	未定义
+			// var f = "";// string	字符串类型
+			
+			// console.log(typeof(a),typeof(b),typeof(c),typeof(d),typeof(e),typeof(f))
+			var day = prompt("请输入一个数");//弹出一个输入框;
+			var week = parseInt(day/7);//将n转换 成整数去小数;
+			var iday=day%7;
+			alert(day+"天数会分解成"+week+"整周,剩余"+iday+"天")
+	</script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>81天</title>
+	<style>
+		body,html{
+			min-width: 1536px;
+		}
+		*{	
+			animation: all 3s;
+			margin: 0;
+			padding: 0;
+		}
+		header{
+			width: 100%;
+			min-width: 1536px;
+			height: 50px;
+			background: #f8f8f8;
+			position:fixed;
+		}
+		header a{
+			text-decoration: none;
+		}
+		header img:nth-child(1){
+			margin-top: 13px;
+			margin-left: 15px;
+			float: left;
+		}
+		ul{
+			display: block;
+			list-style: none;
+			float: left;
+			height: 250px;
+		}
+		header ul a{
+			text-decoration: none;
+			color: #70776f;
+		}
+		header ul li{
+			float: left;
+			margin-left: 30px;
+			margin-top: 15px;
+		}
+		header input:nth-child(1){
+			width: 230px;
+			padding: 10px;
+			border-radius: 5px;
+			height: 14px;
+			border: 1px solid #999;
+			float: left;
+		}
+		header ul li:nth-child(7){
+			margin-top:9px;
+		}
+		header ul li:nth-child(7) div{
+			width: 50px;
+			height: 34px;
+			border-left:1px solid #999;
+			text-align: center;
+			line-height: 34px;
+			float: left;
+			margin-left: -50px;
+		}
+		header div:nth-last-child(1){
+			width: 120px;
+			height: 35px;
+			float: left;
+		}
+		header .tijiao span:nth-last-child(1),header .tijiao span:nth-last-child(2){
+			margin-left: 5px;
+			width: 50px;
+			border: 1px solid #ccc;
+			text-align: center;
+			height: 30px;
+			line-height: 30px;
+			background: #fff;
+			font-size: 12px;
+			display: block;
+			float: left;
+			border-radius: 5px;
+			margin-top: 10px;
+		}
+
+		header .tijiao span:nth-last-child(2){
+			background: #3579b6;
+		}
+		.tijiao{
+			position: absolute;
+			right: 0px;
+		}
+		.tijiao span:nth-last-child(1) a{
+			color: #323834;
+		}
+		.tijiao span:nth-last-child(2) a{
+			color: #fff;
+		}
+		header img:nth-last-child(1){
+			margin-top: 15px;
+			position: absolute;
+			right: 50px;
+			display: none;
+		}
+		@media screen and (max-width: 640px){
+			header{
+				min-width: 640px;
+			}
+			.list{
+				height: 250px;
+			}
+			header ul li{
+				margin-left: 30px;
+				margin-top: 15px;
+				clear: left;
+				width: 80%;
+				font-size: 12px;
+			}
+			header ul{
+				/*transition: all 5s;*/
+				display: none;
+				width: 70%;
+				position: absolute;
+				left: 100px;
+				top: 50px;
+				overflow-y:scroll;
+				overflow-x: hidden; 
+				max-height: 355px;
+				height: 600px;
+			}
+			header ul li:hover{
+				border-bottom: 3px solid #41caff;
+			}
+			header ul li:nth-child(7){
+				display: none;
+			}
+			.tijiao{
+				position: relative;
+				top: 10px;
+			}
+			.tijiao span:nth-last-child(1) a,.tijiao span:nth-last-child(2) a{
+				color: #41caff;
+			}
+			header .tijiao span:nth-last-child(1),header .tijiao span:nth-last-child(2){
+				border: 1px solid #41caff;
+				clear: left;
+				margin-top: 20px;
+				margin-left: 0px;
+			}
+			header .tijiao span:nth-last-child(2){
+				background: none;
+			}
+			header img:nth-last-child(1){
+				display: block;
+				right: 100px;
+				cursor: pointer;
+			}
+			/*.active{
+			/*display: flex;*/
+			/*flex-direction: column;*/
+			/*transition: all 5s;*/
+			/*display: block;*/
+			
+		}*/
+
+		}
+		/*.list{
+			/*height: 250px;*/
+			/*display: none;
+			height: 600px;*/
+		}	*/	
+		
+		/*.ww{
+			transition: all 5s;
+			/*height: 100px;*/
+		}*/
+		#btn{
+			position: absolute;
+			top:300px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<img src="image/云巴给学员素材/images/logo3.png" alt="" class="ww">
+		<ul class="list">
+			<li><a href="####">快速入门</a></li>
+			<li><a href="####">产品介绍</a></li>
+			<li><a href="####">价格</a></li>
+			<li><a href="####">开发者资源</a></li>
+			<li><a href="####">用户案例</a></li>
+			<li><a href="####">博客</a></li>
+			<li><input type="text" placeholder="搜索"><div><a href="####">搜索</a></div></li>
+			<div class="tijiao">
+				<span><a href="####">登录</a></span>
+				<span><a href="####">注册</a></span>
+			</div>
+		</ul>
+		<img src="image/云巴给学员素材/images/1.png" alt="">
+	</header>
+	
+	<input type="button" id="btn" value="sss">
+</body>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		$(function(){
+			$("header img:nth-last-child(1)").click(function(){
+				$("header .list").slideToggle()
+				
+			})
+			$("#btn").click(function(){
+				$(".ww").css("height","300px");
+			})
+			$(window).resize(function(){
+				if($(this).width()>=640){
+					$("header .list").css("display","block")
+				}else{
+					$("header .list").css("display","none")
+				}
+			})
+		})
+	</script>
+</html>

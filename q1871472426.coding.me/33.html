@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第三十三天</title>
+</head>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		ul{
+			text-align: center;
+			border:1px solid blue;
+			font-family: 微软雅黑;
+			width: 400px;
+			height: 250px;
+		}
+		li{
+			height: 25px;
+			width: 400px;
+			list-style: none;
+			text-align: center;
+		}
+		p{
+			width: 97px;
+			text-align: center;
+			float: left;
+		}
+		.first_line{
+			color: blue;
+		}
+		.first_odd{
+			color: white;
+			background: yellowgreen;
+		}
+		.hover{
+			color: black;
+			background-color: yellow;
+		}
+	</style>
+<body>
+	<ul>
+		<li>
+			<p>姓名</p>
+			<p>年龄</p>
+			<p>性别</p>
+			<p>地址</p>
+		</li>
+		<li>
+			<p>张三</p>
+			<p>22</p>
+			<p>男</p>
+			<p>河北省秦皇岛</p>
+		</li>
+		<li>
+			<p>张三</p>
+			<p>22</p>
+			<p>男</p>
+			<p>河北省秦皇岛</p>
+		</li>
+		<li>
+			<p>张三</p>
+			<p>22</p>
+			<p>男</p>
+			<p>河北省秦皇岛</p>
+		</li>
+		<li>
+			<p>张三</p>
+			<p>22</p>
+			<p>男</p>
+			<p>河北省秦皇岛</p>
+		</li>
+		<li>
+			<p>张三</p>
+			<p>22</p>
+			<p>男</p>
+			<p>河北省秦皇岛</p>
+		</li>
+		<li>
+			<p>张三</p>
+			<p>22</p>
+			<p>男</p>
+			<p>河北省秦皇岛</p>
+		</li>
+		<li>
+			<p>张三</p>
+			<p>22</p>
+			<p>男</p>
+			<p>河北省秦皇岛</p>
+		</li>
+		<li>
+			<p>张三</p>
+			<p>22</p>
+			<p>男</p>
+			<p>河北省秦皇岛</p>
+		</li>
+		<li>
+			<p>张三</p>
+			<p>22</p>
+			<p>男</p>
+			<p>河北省秦皇岛</p>
+		</li>
+	</ul>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		$(function(){
+			$("ul li:first").addClass("first_line")
+			$("ul li:odd").addClass("first_odd")
+			$("ul li:not(:first)").mouseenter(function(){
+				$(this).addClass("hover")
+			}).mouseleave(function(){
+				$(this).removeClass("hover")
+			})
+			})
+	</script>
+</body>
+</html>

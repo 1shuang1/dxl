@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第十六天</title>
+	<style>
+		li{
+			list-style: none;
+						width: 20px;
+			height: 20px;
+			background: #fff;
+			text-align: center;
+			float: left;
+			cursor:pointer;
+			border: 1px solid red;
+			}
+			#tu2,#tu3,#tu4,#tu5{
+				display: none;
+			}
+	</style>
+</head>
+<body>
+	<div><img src="tupian/11.jpg" alt="" id=tu1>
+	
+	<ul>
+	<li id="d">1</li>
+	<li id="d1">2</li>
+	<li id="d2">3</li>
+	<li id="d3">4</li>
+	<li id="d4">5</li>
+	</ul>
+		<form action="100.html">
+	<div class="box1"><a href="100.html"><input type="button" value="返回"></a></div>
+	<div class="box1"><a href="index.html"><input type="button" value="首页"></a></div>
+</form>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+	
+			var img = [
+					"tupian/11.jpg",
+					"tupian/12.jpg",
+					"tupian/13.jpg",
+					"tupian/14.jpg",
+					"tupian/15.jpg"
+			]
+			console.log(img[0])
+			$("li").click(function(){
+			var i = $(this).index();
+				$("img").attr("src",img[i]);
+				$(this).css({"background-color":"red","color":"#fff"}).siblings().css({"background-color":"#fff","color":"#000"});
+				
+		})
+			
+	</script>
+</body>
+</html>

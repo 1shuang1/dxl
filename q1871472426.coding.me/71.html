@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>71天</title>
+	<style>
+		*{
+			padding: 0;
+		}
+		.box{
+			position: relative;
+			margin: 0 auto;
+			margin-top: 70px;
+			width: 960px;
+			height: 600px;
+			background-image: url(image/旋转翻书效果素材/images/bookBg.png);
+			transform-style:preserve-3d ;
+			z-index: 1;
+			list-style: none;
+			perspective:1200px;
+		}
+		.box1{
+			width: 462px;
+			height:582px;
+			background-image: url(image/旋转翻书效果素材/images/bookLeft.png);
+			position: absolute;
+			left: 20px;
+			top: 10px;
+			z-index:1;
+			transition: all 3s;
+		}
+		.img1{
+			position: absolute;
+			left: 30px;
+			top: 30px;
+		}
+		.box2{
+			width: 462px;
+			height:582px;
+			background-image: url(image/旋转翻书效果素材/images/bookRight.png);
+			position: absolute;
+			right: 20px;
+			top: 10px;
+			transform-origin: 0% 50%;
+			z-index: 3;
+			transform-style: preserve-3d;
+			transition: all 3s;
+		}
+
+		.img2,.img3,.img4{
+			width: 400px;
+			position: absolute;
+			left: 30px;
+			top: 30px;			
+		}
+		.img2_back,.img3_back,.img4_back{
+			transform: rotateY(180deg);	
+			position: absolute;
+			left: 30px;
+			top: 30px;				
+		}
+		.gl,.g2,.g4{
+			position: absolute;
+			left: 30px;
+			top: 30px;
+			width: 400px;
+			height: 100px;
+			background: #ebebeb;
+		}
+		.p1{
+			font-weight:bold;
+			font-size: 24px;
+		}
+		.box2 p,.box3 p,.box4 p{
+			margin-top: 30px;
+			margin-left: 20px;
+		}
+		.box3{
+			width: 462px;
+			height:582px;
+			background-image: url(image/旋转翻书效果素材/images/bookRight.png);
+			position: absolute;
+			right: 20px;
+			top: 10px;
+			transition: all 3s;
+			transform-origin: 0% 50%;
+			z-index: 2;
+			transform-style: preserve-3d;
+		}
+		.box4{
+			width: 462px;
+			height:582px;
+			background-image: url(image/旋转翻书效果素材/images/bookRight.png);
+			position: absolute;
+			right: 20px;
+			top: 10px;
+			transition: all 3s;
+			transform-origin: 0% 50%;
+			z-index: 1;
+			transform-style: preserve-3d;
+		}
+		@keyframes activ {
+			0%{transform: rotateY(0deg);}
+			100%{transform: rotateY(-180deg);}
+		}
+		.box5{
+			position: relative;
+			margin: 0 auto;
+			margin-top: -100px;
+			width: 960px;
+			height: 600px;
+			transform-style:preserve-3d ;
+			z-index: 5;
+		}
+		.left{
+			width: 50px;
+			height: 50px;
+			background: black;
+			text-align: center;
+			line-height: 50px;
+			color: white;
+			opacity: 0.1;
+			transition: all 3s;
+		}
+		.left:hover{
+			opacity:1;
+		}
+		.right{
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			width: 50px;
+			height: 50px;
+			background: black;
+			text-align: center;
+			line-height: 50px;
+			color: white;
+			opacity: 0.1;
+			transition: all 3s;
+		}
+		.left:hover,.right:hover{
+			opacity:1;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box">
+
+		<div class="box1">
+			<img src="image/旋转翻书效果素材/images/dataImg1.png" alt="" class="img1">
+		</div>
+		<ul>
+		<li class="box2">
+			<img src="image/旋转翻书效果素材/images/dataImg2.png" alt="" class="img2">
+			<div class="gl"><p><font class="p1">Glacier</font> red i<br>n the glacier.</p></div>
+			<img src="image/旋转翻书效果素材/images/dataImg2.png" alt="" class="img2_back">
+		</li>
+		<li class="box3">
+			<img src="image/旋转翻书效果素材/images/dataImg3.png" alt="" class="img3">
+			<div class="g2"><p><font class="p1">Surface</font> wat<br>er supply,the.</p></div>
+			<img src="image/旋转翻书效果素材/images/dataImg3.png" alt="" class="img3_back">
+		</li>
+		<li class="box4">
+			<img src="image/旋转翻书效果素材/images/dataImg4.png" alt="" class="img4">
+			<div class="g4"><p><font class="p1">Groundwa</font><br><font class="p1">ter</font>itions,good</p></div>
+			<img src="image/旋转翻书效果素材/images/dataImg4.png" alt="" class="img4_back">
+		</li>
+	</ul>
+	</div>
+	<div class="box5">
+		<div class="left"><</div>
+		<div class="right">></div>
+	</div>
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		 var i=0;
+    $(".right").click(function(){
+        console.log(i);
+        if(i<3){
+            $("ul li").eq(i).css("transform","rotateY(-180deg)");
+            // setTimeout(function(){
+                $("ul li").eq(i).css("z-index",i+2)
+                i++;
+            // },1000);
+
+        }
+    })
+    $(".left").click(function(){
+        if(i>0){ console.log(i);
+            i--;
+            $("ul li").eq(i).css("transform","rotateY(0deg)");
+            // setTimeout(function(){
+                $("ul li").eq(i).css("z-index",4-i)
+
+            // },1000);
+        }
+    })
+
+	</script>
+</html>

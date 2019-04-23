@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第十七天</title>
+	<style>
+		.box{
+			width:300px;
+			height:300px;
+			background-color: red;
+			font-size: 15px;
+			line-height: 300px;
+			text-align: center;
+			}
+	</style>
+</head>
+<body>
+	<button class="hide">隐藏</button>
+	<button class="show">显示</button>
+	<button class="toggle">切换显示与隐藏</button>
+	<button class="fadeIn">渐入</button>
+	<button class="fadeOut">渐出</button>
+	<button class="fadeToggle">切换渐入和渐出</button>
+	<button class="slideUp">上卷</button>
+	<button class="slideDown">下拉</button>
+	<button class="stop">暂停</button>
+	<button class="animate">动画</button>
+
+	<div class="box">
+		iufuabifbaiknaovaofaodoa
+	</div>
+	
+	
+		<form action="100.html">
+	<div class="box1"><a href="100.html"><input type="button" value="返回"></a></div>
+	<div class="box1"><a href="index.html"><input type="button" value="首页"></a></div>
+</form>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".show").click(function(){
+				$(".box").show(500);
+			})
+			$(".hide").click(function(){
+				$(".box").hide(500);
+			})
+			$(".toggle").click(function(){
+				$(".box").toggle(500);
+			})
+			$(".fadeIn").click(function(){
+				$(".box").fadeIn(500);
+			})
+			$(".fadeOut").click(function(){
+				$(".box").fadeOut(500);
+			})
+			$(".fadeToggle").click(function(){
+				$(".box").fadeToggle(500);
+			})
+			$(".slideUp").click(function(){
+				$(".box").slideUp(500);
+			})
+			$(".slideDown").click(function(){
+				$(".box").slideDown(500);
+			})
+			$(".stop").click(function(){
+				$(".box").stop(500);
+			})
+			$(".animate").click(function(){
+				$(".box").stop().animate({"height":"600px","font-size":"30px"},500,function(){
+					$(".box").animate({"height":"300px","font-size":"15px"},1000)
+				})
+			})
+			$(".animate").mouseover(function(){
+				$(".box").animate({"width":"600px","font-size":"30px"},500);
+				$(".box").animate({"width":"300px","font-size":"15px"},500);
+				$(".box").animate({"width":"600px","font-size":"30px"},500);
+				$(".box").animate({"width":"300px","font-size":"15px"},500);
+			})
+			$(".animate").dblclick(function(){
+				$(".box").animate({"margin-top":"100px","font-size":"30px"},500);
+				$(".box").animate({"margin-top":"0px","font-size":"15px"},500);
+				$(".box").animate({"margin-top":"100px","font-size":"30px"},500);
+				$(".box").animate({"margin-top":"0px","font-size":"15px"},500);
+			})
+			
+
+		})	
+	</script>
+</body>
+</html>

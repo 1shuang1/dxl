@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第三十四天</title>
+</head>
+<style>
+	.box{width: 400px;height: 400px;background: yellow;display: none;}
+	button{
+		width: 50px;
+		height:30px;
+	}
+</style>
+<body>
+	<div class="box"></div>
+	<input type="button" value="显示">
+</body>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		$("input").click(function(){
+			$("div").toggle(1000);
+			if($(this).val()=="显示"){
+				$(this).val("隐藏")
+			}else{
+				$(this).val("显示")
+			}
+		})
+	</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>51天</title>
+</head>
+	<style>
+		.range{
+
+		}
+	</style>
+<body>
+	<form method="get" action="www.html">
+		url：<input type="url" name="url"><br>
+		email：<input type="email"><br>
+		date：<input type="date" name="date" value="2018-04-04" class="date"><br>
+		time：<input type="time"><br>
+		datetime-local：<input type="datetime-local"><br>
+		<input type="submit" class="ti"><br>
+		number:<input type="number" min="0" max="20" value="0" step="5"><br>
+		range:<input type="range" max="10" min="0" value="5" class="range"><br>
+		tel:<input type="tel" pattern="^1[0-9]{10}$"><!-- 1开头10结尾 --><br>
+		search:<input type="search"><br>
+		color:<input type="color" class="col"><p class="p2"></p><br>
+	</form>
+	<button>提交1</button>
+</body>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		$("button").click(function(){
+			$(".date").val("2018-05-05")
+		})
+		// .col的颜色值变化时会触发change事件
+		$(".col").change(function(){
+			var color=$(".col").val();
+			$(".p2").text(color);
+			$(".p2").css({"color":color});
+		})
+	</script>
+</html>

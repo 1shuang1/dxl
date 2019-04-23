@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>49天 html5</title>
+	<style>
+		*{
+			margin:0;
+			padding: 0;
+		}
+		.header{
+			text-align: center;
+			line-height: 80px;
+			width: 1366px;
+			margin:0 auto;
+			height: 80px;
+			margin-top: 10px;
+			background: red;
+		}
+		.nav{
+			text-align: center;
+			line-height: 50px;
+			background: yellow;
+			width: 1366px;
+			margin:0 auto;
+			height: 50px;
+			margin-top: 10px;
+		}
+		.box{
+
+			width: 1366px;
+			margin:0 auto;
+			background: blue;
+			height: 400px;
+			margin-top: 10px;
+			border: 1px solid blue;
+			position: relative;
+		}
+		.footer{
+			text-align: center;
+			line-height: 60px;
+			width: 1366px;
+			margin:0 auto;
+			height: 60px;
+			background: #999;
+			margin-top: 10px;
+		}
+		.box1{
+			text-align: center;
+			width: 65%;
+			height: 90%;
+			background: pink;
+			margin-top:20px; 
+			margin-left: 20px;
+			float: left;
+		}
+		.box2{
+			text-align: center;
+			line-height: 400px;
+			width: 31%;
+			height: 90%;
+			background: green;
+			position: absolute;
+			right:20px; 
+			top: 20px;
+			float: left;
+		}
+		h1,h3{
+			margin-top: 2px;
+			width: 100%;
+			text-align:center;
+		}
+		.wen{
+			width: 90%;
+			background: yellow;
+			line-height: 50px;
+			height: 50px;
+			margin:0 auto;
+		}
+		.xia{
+			position: relative;
+			width: 90%;
+			background: #625;
+			height: 220px;
+			margin:0 auto;
+			margin-top: 10px;
+		}
+		.xia figure{
+			width: 30%;
+			height: 120px;
+			float: left;
+			margin-left: 20px;
+			margin-top: 25px;
+		}
+		.xia figure img{
+			width: 100%;
+		}
+		.wen{
+			display: inherit;
+		}
+	</style>
+</head>
+<body>
+	<header class="header">网页头部</header>
+	<nav class="nav">导航</nav>
+	<section class="box">
+		<article class="box1">
+		<hgroup>
+			<h1>文章主标题</h1>
+			<h3>文章副标题</h3>
+		</hgroup>
+			<artivleav class="wen">一篇文章</artivleav>
+			<section class="xia">
+				<figure><figcaption>精诚合作共赢</figcaption><img src="image/11.jpg" alt=""></figure>
+				<figure><figcaption>精诚合作共赢</figcaption><img src="image/11.jpg" alt=""></figure>
+				<figure><figcaption>精诚合作共赢</figcaption><img src="image/11.jpg" alt=""></figure>
+			</section>
+		</article>
+		<aside class="box2">侧边栏</aside>
+	</section>
+	<footer class="footer">页面底部</footer>
+	<input type="text" list="1st" name="text_name">
+	<datalist id="1st">
+		<option value="1">苹果</option>
+		<option value="2">香蕉</option>
+		<option value="3">梨</option>
+	</datalist>
+</body>
+</html>

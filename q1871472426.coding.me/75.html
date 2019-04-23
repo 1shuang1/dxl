@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>75天</title>
+	<style>
+		div{
+			width: 300px;
+			height: 300px;
+			background: black;
+			border-radius: 5px;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			align-items:center;
+			align-content:center;
+			justify-content:center;
+			float: left;
+		}
+		span{
+			display: block;
+			width: 230px;
+			height: 230px;
+			border-radius: 5px;
+			background: #dedede;
+			border-top: 5px solid white;
+			border-bottom: 5px solid #999;
+			border-left: 5px solid #dedede;
+			border-right: 5px solid #ededed;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items:center;
+			align-content:center;
+			justify-content:space-between;
+		}
+		.spanm{
+			flex-direction:row-reverse;
+			align-items:baseline;
+		}
+		.spanm1{
+			flex-direction:column;
+			align-items:baseline;
+		}
+		p{
+			display: block;
+			width: 50px;
+			height: 50px;
+			border-radius: 100px;
+			background: black;
+			margin: 10px;
+			text-align: center;
+			line-height: 50px;
+		}
+		.spam{
+			flex-direction: row;
+			justify-content:center;
+			flex-wrap:wrap-reverse;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<span>
+			<p style="order: 9;background: white;">9</p>
+			<p style="order: 8;background: orange;">8</p>
+			<p style="order: 7;background: yellow;">7</p>
+			<p style="order: 6;background: blue;">6</p>
+			<p style="order: 5;background: red;">5</p>
+			<p style="order: 4;background: green;">4</p>
+			<p style="order: 3;background: white;">3</p>
+			<p style="order: 2;background: orange;">2</p>
+			<p style="order: 1;background: yellow;">1</p>
+		</span>
+	</div>
+	<div>
+		<span class="spam">
+			<p style="order: 9;background: white;">9</p>
+			<!-- <p style="order: 8;background:#999;">8</p> -->
+			<p style="order: 7;background: yellow;">7</p>
+			<p style="order: 6;background: blue;">6</p>
+			<p style="order: 5;background: red;">5</p>
+			<p style="order: 4;background: green;">4</p>
+			<p style="order: 3;background: white;">3</p>
+			<p style="order: 2;background:orange;">2</p>
+			<p style="order: 1;background: yellow;">1</p>
+		</span>
+	</div>
+	<div>
+		<span>
+			<p style="order: 9;background: white;">9</p>
+			<p style="order: 8;background:transparent;"></p>
+			<p style="order: 7;background: yellow;">7</p>
+			<p style="order: 6;background: blue;">6</p>
+			<p style="order: 5;background: red;">5</p>
+			<p style="order: 4;background: green;">4</p>
+			<p style="order: 3;background: white;">3</p>
+			<p style="order: 2;background:transparent;"></p>
+			<p style="order: 1;background: yellow;">1</p>
+		</span>
+	</div>
+	<div style="width: 300px; height: 300px;">
+		<span style="width: 200px; height: 200px;">
+			<p style="order: 6;background: blue;">6</p>
+			<p style="order: 5;background: red;">5</p>
+			<p style="order: 4;background: green;">4</p>
+			<p style="order: 3;background: white;">3</p>
+			<p style="order: 2;background: orange;">2</p>
+			<p style="order: 1;background: yellow;">1</p>
+		</span>
+	</div>
+	<div style="width: 300px; height: 300px;">
+		<span style="width: 200px; height: 200px;">
+			<p style="order: 4;background: green;">4</p>
+			<p style="order: 3;background: white;">3</p>
+			<p style="order: 2;background: orange;">2</p>
+			<p style="order: 1;background: yellow;">1</p>
+		</span>
+	</div>
+	<div>
+		<span>
+			<!-- <p style="order: 9;background: white;">9</p>
+			<p style="order: 8;background: orange;">8</p>
+			<p style="order: 7;background: yellow;">7</p> -->
+			<p style="order: 6;background: transparent;"></p>
+			<p style="order: 5;background: red;">5</p>
+			<p style="order: 4;background: transparent;"></p>
+			<!-- <p style="order: 3;background: white;">3</p>
+			<p style="order: 2;background: orange;">2</p>
+			<p style="order: 1;background: yellow;">1</p> -->
+		</span>
+	</div>
+	<div>
+		<span>
+			<p style="order: 9;background: transparent;"></p>
+			<p style="order: 8;background: orange;">8</p>
+			<p style="order: 7;background: transparent;"></p>
+			<p style="order: 6;background: transparent;"></p>
+			<p style="order: 5;background: red;">5</p>
+			<p style="order: 4;background: transparent;"></p>
+			<!-- <p style="order: 3;background: white;">3</p>
+			<p style="order: 2;background: orange;">2</p>
+			<p style="order: 1;background: yellow;">1</p> -->
+		</span>
+	</div>
+	<div>
+		<span>
+			<p style="order: 9;background: orange;">9</p>
+			<p style="order: 8;background: transparent;"></p>
+			<p style="order: 7;background: transparent;"></p>
+			<p style="order: 6;background: transparent;"></p>
+			<p style="order: 5;background: red;">5</p>
+			<p style="order: 4;background: transparent;"></p>
+			<p style="order: 3;background: transparent;"></p>
+			<p style="order: 2;background: transparent;"></p>
+			<p style="order: 1;background: yellow;">1</p>
+		</span>
+	</div>
+	<div>
+		<span>
+			<p style="order: 9;background: orange;">9</p>
+			<p style="order: 8;background: transparent;"></p>
+			<p style="order: 7;background: green;">7</p>
+			<p style="order: 6;background: transparent;"></p>
+			<p style="order: 5;background: red;">5</p>
+			<p style="order: 4;background: transparent;"></p>
+			<p style="order: 3;background: blue;">3</p>
+			<p style="order: 2;background: transparent;"></p>
+			<p style="order: 1;background: yellow;">1</p>
+		</span>
+	</div>
+	<div>
+		<span class="spanm">
+			<p style="flex-basis:auto;background: orange;">9</p>
+			<p style="align-self:center;background: red;">5</p>
+			<p style="align-self: flex-end;background: yellow;">1</p>
+		</span>
+	</div>
+	<div>
+		<span class="spanm1">
+			<p style="flex-basis:auto;background: orange;">9</p>
+			<p style="align-self:center;background: red;">5</p>
+			<p style="align-self: flex-end;background: yellow;">1</p>
+		</span>
+	</div>
+</body>
+</html>

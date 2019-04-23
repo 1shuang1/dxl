@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>52天</title>
+</head>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+		.header{
+			position: relative;
+			top: 5px;
+			width: 500px;
+			height: 760px;
+			border: 1px solid black;
+			margin:0 auto;
+			z-index: 1;
+		}
+		.p1{
+			font-size: 20px;
+			text-align: center;
+			width: 100px;
+			background: white;
+			float: left;
+			position: relative;
+			left: 538px;
+			top: -30px;
+			z-index: 2;
+		}
+		.p2{
+			margin-left: 55px;
+			margin-top: 25px;
+			font-size: 18px;
+			margin-bottom: 0;
+		}
+		.p3{
+			margin-left: 55px;
+			font-size: 18px;
+			margin-bottom: 0;
+		}
+
+		.text,.tel,.email,.number,.box,.date,.pr1,.sub,.box1{
+			margin-left: 55px;
+			margin-top: 10px;
+		}
+		.box{
+			border: 1px solid black;
+			width: 373px;
+			height: 20px;
+		}
+		.box1{
+			width: 373px;
+			height: 20px;
+			background: yellow;
+		}
+		.date{
+			width: 367px;
+		}
+		.pr1{
+			width: 370px;
+		}
+		.sub{
+			width: 370px;
+			height: 30px;
+			background: green;
+			border: 0;
+			color: white;
+			margin-top: 25px;
+		}
+		.text{
+			width: 373px;
+		}
+	</style>
+<body>
+<form action="#" method="get">
+	<p class="p1">学生档案</p>
+	<div class="header">
+		<p class="p2">姓名:</p>
+		<input type="text" placeholder="请输入姓名" size="56" class="text" autofocus required>
+		<p class="p3">手机号码:</p>
+		<input type="tel" pattern="^1[0-9]{10}$" placeholder="请输入手机号码" size="56" class="tel" required>
+		<p class="p3">邮箱地址:</p>
+		<input type="email" placeholder="请输入邮箱地址" size="56" class="email" required>
+		<p class="p3">所属院校:</p>
+		<input type="text" placeholder="前端与移动开发学院" size="56" class="text" required>
+		<p class="p3">入学成绩:</p>
+		<input type="number" placeholder="80" size="56" max="100" min="0" class="text">
+		<p class="p3">基础水平:</p>
+		<progress value="80" max="100" class="pr1"></progress>
+		<p class="p3">入学日期:</p>
+		<input type="date" value="2016-01-01" size="60" class="date" required>
+		<p class="p3">毕业时间:</p>
+		<input type="date" value="2016-05-01" size="60" class="date" required>
+		<p class="p3">课程进度:</p>
+		<progress value="10" max="100" class="pr1"></progress><br>
+		<input type="submit" class="sub" value="保存">
+	</div>
+</form>
+</body>
+</html>

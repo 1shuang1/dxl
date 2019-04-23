@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>87天</title>
+	<style>
+		.but{
+			t
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="点我" class="but">
+	<p class="txt"></p>
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+
+	var arr = new Array(6)
+	arr[0] = "1"
+	arr[1] = "2"
+	arr[2] = "3"
+	arr[3] = "4"
+	arr[4] = "5"
+	arr[5] = "6"
+	document.write(arr.join(".")+ "<br />")
+	document.write(arr + "<br />")
+	document.write(arr.slice(2,4) + "<br />")
+	document.write(arr.shift() + "<br />")
+	document.write(arr.pop())
+	document.write(arr+ "<br />")
+	
+	// var r=Math.random()
+	// r=Math.floor(r*100)
+	// document.write(r)
+
+	$(".but").click(function(){
+		// var arr=["1","2","3","4","5","6","7","8","9","10"]
+		var r=Math.random();
+		r=Math.floor(r*100);
+		$(".txt").text(r)
+	})
+</script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第十三天</title>
+	<style>
+		.box{
+			margin:0 auto;
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+		#box1{
+			margin:0 auto;
+			width: 200px;
+			height: 200px;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+
+	<div style="height: 250px; text-align: center;">
+		<h1>今天学习了js</h1>
+		<p>↓步骤如下↓</p>
+		导入js:< script src="#">< /script>写到body的最下面<br>
+		还得再加一个< script src="#">< /script>写内容<br>
+		js代码写在这里面，不可以写在引入jQuery文件的script标签中<br>
+		类选择器$(“.box”).css选中所有的这个名字的选择器<br>
+		Id选择器$(“#box”)<br>
+		例：.box的css宽变200px<br>
+		$(".box").css("width","200px")<br>
+		<p>↓效果如下↓</p>
+		<div class="box"></div>
+		<div id="box1"></div>
+			<form action="100.html">
+	<div class="box1"><a href="100.html"><input type="button" value="返回"></a></div>
+	<div class="box1"><a href="index.html"><input type="button" value="首页"></a></div>
+</form>
+	</div>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		$(".box").click(function(){
+			$(".box").css("background-color","#000")
+		})
+		$(".box").css("width","200px")
+		$("#box1").css("border","1px solid #000")
+	</script>
+</body>
+</html>

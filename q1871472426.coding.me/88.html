@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>88天</title>
+</head>
+<body>
+	
+</body>
+<script>
+	function mox(f,e,g){
+		if (g=="+"){
+			return(f+e)
+		}else if (g=="-") {
+			return(f-e)
+		}else if (g=="*") {
+			return(f*e)
+		}else if (g=="/") {
+			return(f/e)
+		}else if (g=="%") {
+			return(f%e)
+		}
+		return;
+	}
+	var f=Number(prompt("请输入数1"));
+	var e=Number(prompt("请输入数2"));
+	var g=prompt("请输符号");;
+	var n=mox(f,e,g);
+	document.write(n)
+		
+</script>
+</html>

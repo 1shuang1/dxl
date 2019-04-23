@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+        	margin: 0;padding: 0;
+        }
+        .list .img_list{
+            width: 35px;
+            height: 35px;
+            background-color: #7a6e6e;
+            background-image: url("images/toolbars.png");
+            background-position: -49px -1px;
+            display: block;
+            border-radius: 3px 0 0 3px;
+            z-index: 2;
+        }
+        .list .txt_list{
+            width: 95px;
+            height: 35px;
+            display: block;
+            background-color: #7a6e6e;
+            border-radius: 3px 0 0 3px;
+            z-index: 1;
+            color:white;
+            line-height: 35px;
+        }
+        .list a{
+            position: absolute;
+            left: 0;
+            top:0;
+        }
+        .list li{
+            position: relative;
+            width: 35px;
+            height: 35px;
+            margin-bottom: 2px;
+        }
+        .list{
+            list-style: none;
+            position: fixed;
+            top:300px;
+            right:0px;
+        }
+        body{
+            height: 2000px;
+        }
+        .menu_list{
+            list-style: none;
+            position: fixed;
+            left: 10px;
+            top:150px;
+        }
+
+        .menu_list .txt_list{
+            width: 21px;
+
+            background-color: #7a6e6e;
+            display: block;
+            border-bottom: 1px solid white;
+            color:white;
+            padding: 10px 7px;
+
+        }
+        body .menu_list .active{
+            background-color: #c81623;
+        }
+        .menu_top{
+            display: none;
+            position:fixed;
+            top:0;
+            left:0;
+        }
+    </style>
+</head>
+<body>
+<div class="menu_top">
+    <img src="../image/横拉特效给学生素材/big_1.gif" alt=""/>
+</div>
+ <img src="../image/1.png" alt=""/>
+<!-- <ul class="list">
+    <li>
+        <a class="img_list" href="####"></a>
+        <a class="txt_list" href="">购物车</a>
+    </li>
+    <li>
+        <a class="img_list" href="####"></a>
+        <a class="txt_list" href="">购物车</a>
+    </li>
+    <li>
+        <a class="img_list" href="####"></a>
+        <a class="txt_list" href="">购物车</a>
+    </li>
+    <li>
+        <a class="img_list" href="####"></a>
+        <a class="txt_list" href="">购物车</a>
+    </li>
+    <li>
+        <a class="img_list" href="####"></a>
+        <a class="txt_list" href="">购物车</a>
+    </li>
+    <li>
+        <a class="img_list" href="####"></a>
+        <a class="txt_list" href="####" id="dump_top">顶部</a>
+    </li>
+</ul> -->
+<ul class="menu_list">
+    <li>
+        <a class="txt_list" href="####">家电</a>
+    </li>
+    <li>
+        <a class="txt_list" href="####">智能</a>
+    </li>
+    <li>
+        <a class="txt_list" href="####">搭配</a>
+    </li>
+    <li>
+        <a class="txt_list" href="####">配件</a>
+    </li>
+    <li>
+        <a class="txt_list" href="####">周边</a>
+    </li>
+    <li>
+        <a class="txt_list" href="####" >为您推荐</a>
+    </li>
+</ul>
+</body>
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script>
+    //为window窗体添加滚动事件
+      $(window).scroll(function(){
+        var sc=$(this).scrollTop();
+        console.log(sc);
+        if(sc>616){
+            $(".menu_top").slideDown(500);
+        }else{
+            $(".menu_top").slideUp(500);
+        }
+
+        if(sc>=1220 && sc<1997){
+            $(".menu_list li").eq(0).find("a").addClass("active");
+            $(".menu_list li").eq(0).siblings().find("a").removeClass("active");
+        }
+        if(sc>=1998 && sc<2680){
+            $(".menu_list li").eq(1).find("a").addClass("active");
+            $(".menu_list li").eq(1).siblings().find("a").removeClass("active");
+        }
+        if(sc>=2681 && sc<3390){
+            $(".menu_list li").eq(2).find("a").addClass("active");
+            $(".menu_list li").eq(2).siblings().find("a").removeClass("active");
+        }
+        if(sc>=3391 && sc<4080){
+            $(".menu_list li").eq(3).find("a").addClass("active");
+            $(".menu_list li").eq(3).siblings().find("a").removeClass("active");
+        }
+        if(sc>=4081 && sc<4758){
+            $(".menu_list li").eq(4).find("a").addClass("active");
+            $(".menu_list li").eq(4).siblings().find("a").removeClass("active");
+        }
+        if(sc>=4760 && sc<5140){
+            $(".menu_list li").eq(5).find("a").addClass("active");
+            $(".menu_list li").eq(5).siblings().find("a").removeClass("active");
+        }
+    })
+    $(".menu_list li").click(function(){
+
+        var index=$(this).index();
+        var top=2700+index*500;
+        console.log(top);
+        $("html,body").animate({scrollTop:top},300);
+    })
+   $("#dump_top").click(function(){
+       $("html,body").animate({scrollTop:0},300);
+   })
+    // $(".list li").mouseenter(function(){
+    //     //1将图标背景变成红色
+    //     $(this).find(".img_list").css("backgroundColor","#c81623");
+    //     //2将字的背景也变红色
+    //     $(this).find(".txt_list").css("backgroundColor","#c81623");
+    //     //3.使用自定义动画，让字回去
+    //     $(this).find(".txt_list").stop().animate({marginLeft:-60},300);
+    // })
+    // //鼠标移出
+    // $(".list li").mouseleave(function(){
+    //     //1将图标背景变成灰色
+    //     $(this).find(".img_list").css("backgroundColor","#7a6e6e");
+    //     //2将字的背景也变灰色
+    //     $(this).find(".txt_list").css("backgroundColor","#7a6e6e");
+    //     //3.使用自定义动画，让字移动出来
+    //     $(this).find(".txt_list").stop().animate({marginLeft:0},300);
+    // })
+</script>
+</html>

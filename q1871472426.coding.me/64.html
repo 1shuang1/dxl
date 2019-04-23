@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>64天</title>
+	<style>
+		.box{
+			width: 500px;
+			height: 600px
+			border:1px solid red;
+			margin:0 auto;
+			position: relative;
+			transform-style:preserve-3d;
+			perspective: 1200px;
+			transition:all 3s;
+
+		}
+		img{
+			margin-top: 200px;
+			transition:all 3s;
+			position: absolute;
+			top: 100px;
+			left: 100px;
+			background: #999;
+			transform: rotateX(-20deg) rotateY(-16deg) rotateZ(-60deg);
+			box-shadow: 10px 10px 0px;
+			transform-origin:50% 50% 500px;
+		}
+		img:hover{
+			transform:rotate3d(1,1,1,0deg) translate3d(0px,0px,300px);
+			box-shadow: -51px -43px 0px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="box1"></div>
+		<img src="image/cai.png" alt="">
+	</div>
+</body>
+</html>

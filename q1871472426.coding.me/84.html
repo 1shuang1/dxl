@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>84天</title>
+</head>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+		font-size: 30px;
+	}
+	div{
+		width: 300px;
+		height: 300px;
+		text-align: center;
+		line-height: 300px;
+	}
+</style>
+<body>
+	<!-- for表达式 -->
+	<div></div>
+</body>
+<script>
+	// for(var i=1; i<=100; i++){
+	// 	document.write(+i+"<br/>");
+	// }
+	// console.log("结束")
+	var sum=1;
+	for(var i=1; i<=100; i++){
+		sum+=i;
+	}
+	document.write(+sum+"<br/>");
+	console.log("结束")
+	for(var i=1; i<=50; i++){
+		document.write("******<br/>");
+	}
+	console.log("结束")
+	var sum = 0;
+	for(var i=1; i<=5; i++){
+		var	c=Number(prompt("请输入分数"));
+			sum+=c;
+			c+=i
+	}
+	sum=sum/5;
+	document.write(+sum+"<br/>");
+	console.log("结束")
+	
+	var	c=Number(prompt("请输入一个值"));
+	var sun = c;
+	for(var i=0; i<=c; i++){
+			document.write(+i+"+"+sun+"="+c+"<br/>");
+			sun--;
+	}
+
+	console.log("结束")
+	奇数
+	for(var i=1; i<=100; i++){
+		if (i%2==1) {
+			document.write(+i+"<br/>");
+		}
+	}
+	console.log("结束")
+	// 偶数
+	for(var i=1; i<=100; i++){
+		if (i%2==0) {
+			document.write(+i+"<br/>");
+		}
+	}
+	console.log("结束")
+	5.
+	for(var i=1; i<=3; i++){
+		document.write("********<br/>");
+	}
+	console.log("结束")
+
+	6.
+	var s="*";
+	for(var i=1; i<=6; i++){
+		document.write(""+s+"<br/>");
+		s+="*";
+	}
+	console.log("结束")
+
+	双循环
+	7.
+	for(var j=0; j<5; j++){
+		for(var i=5; i>j; i--){
+			document.write("*");
+		}
+		document.write("<br/>");
+	}
+	console.log("结束")
+
+	// 8.
+	var p=0;
+	for(var j=0; j<5; j++){
+		for(var i=5; i>j;i--){
+			document.write("&nbsp;");
+		}
+		for(var k=0; k<=p;k++){
+			document.write("<b>*<b/>");
+		}
+
+		document.write("<br/>");
+		p+=2;
+		p<12;
+	}
+	console.log("结束")
+	
+	// 9.
+	var p=0;
+	for(var j=0; j<5; j++){
+		for(var i=-1; i<=j;i++){
+			document.write("&nbsp;");
+		}
+		for(var k=5; k>=j*2-1;k--){
+			document.write("<b>*<b/>");
+		}
+		document.write("<br/>");
+	}
+	console.log("结束")
+</script>
+</html>

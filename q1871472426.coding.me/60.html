@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>60天</title>
+	<style>
+		div{
+			width: 250px;
+			height: 250px;
+			margin-left:10px;
+			float: left;
+		}
+		.box{
+			background: linear-gradient(to top,red,green)
+		}
+		.box1{
+			background: linear-gradient(to top,red 30%,green 50%)
+		}
+		.box2{
+			background: linear-gradient(0deg,red 30%,green 50%)
+		}
+		.box3{
+			background: radial-gradient(farthest-side circle,red,green)
+		}
+		.box4{
+			background: radial-gradient(ellipse 50px 100px at 50px 50px,red,green);
+			transform:rotate(45deg);
+			transform: rotate3d();
+			border-radius: 100%;
+		}
+		.box5{	
+			width: 1500px;
+			height: 600px;
+			background: #999;
+			position: relative;
+		}
+		img{
+			position: absolute;
+			top: 100px;
+			left: 100px;
+			border: 10px solid white;
+			border-radius: 10px;
+			transform-origin: 0 50%;
+			margin-left: 100px;
+		}
+		.img1{
+			transform: rotate(-15deg);
+		}
+		.img2{
+			transform: rotate(15deg);
+		}
+		.img3{
+			transform: rotate(35deg);
+		}
+		.img4{
+			transform: rotate(55deg);
+		}
+		.img5{
+			width: 500px;
+			transform: translate(450px,80px);
+		}
+		.box6{
+			background: radial-gradient(ellipse 50px 100px at 50px 50px,red,green);
+			transform: rotate3d(1,0,0,20deg);
+			border-radius: 100%;
+		}
+		.box7{
+			background: linear-gradient(to top,red,green);
+			transform: rotate3d(1,0,0,20deg);
+			border-radius: 100%;
+		}
+		.box8{
+			background: linear-gradient(to top,red,green);
+			transform: rotate3d(1,0,0,20deg);
+			border-radius: 100%;
+		}
+		.box9{
+			background: linear-gradient(to top,red,green);
+			transform: rotate3d(1,0,0,20deg);
+			border-radius: 100%;
+		}
+		.box10{
+			background: linear-gradient(to top,red,green);
+			transform: rotate3d(1,0,0,20deg);
+			border-radius: 100%;
+		}
+		.box11{
+			background: linear-gradient(to top,red,green);
+			transform: rotate3d(1,0,0,50deg);
+			border-radius: 100%;
+		}
+		.box12{
+			background: linear-gradient(to top,red,green);
+			transform: rotate3d(1,0,0,30deg);
+			border-radius: 100%;
+		}
+		.img6 {
+			transform-origin: 50% 50%;
+            transition: All 0.4s ease-in-out;
+            -webkit-transition: All 0.4s ease-in-out;
+            -moz-transition: All 0.4s ease-in-out;
+            -o-transition: All 0.4s ease-in-out;
+            /*-webkit-transform:rotate(330deg) translate(0, -142%); 
+    		-webkit-animation-delay: -0.0833s;*/
+        }
+
+        .img6:hover {
+         	
+            transform: rotate(360deg);
+            /*-webkit-transform: rotate(360deg);*/
+            -moz-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+        }
+        .box13{
+        	border-radius: 100%;
+        	width: 300px;
+        	height: 300px;
+        	animation:myfirst 5s;
+        	background: linear-gradient(to top,red,green);
+        	animation:rotate3d 5s linear infinite;
+        	transform: rotate3d(1,1,0,0deg);
+        }
+        @keyframes myfirst{
+			0%   {background:linear-gradient(to top,red,green);}
+			25%  {background:linear-gradient(to left,red,green);}
+			50%  {background:linear-gradient(to bottom,red,green);}
+			100% {background:linear-gradient(to right,red,green);}
+		}
+		@keyframes rotate3d{
+			0%   {transform: rotate3d(1,1,0,90deg);background: red;}
+			25%  {transform: rotate3d(1,1,0,180deg);background: orange;}
+			50%  {transform: rotate3d(1,1,0,240deg);background: yellow;}
+			100% {transform: rotate3d(1,1,0,360deg);background: green;}
+		}
+		.box14{
+			width: 200px;
+			height: 200px;
+			transform: scale(2,0.5);
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<div class="box3"></div>
+	<div class="box4"></div>
+	<div class="box5">
+		<img src="image/变形练习1/1/images/1.jpg" alt="" class="img1">
+		<img src="image/变形练习1/1/images/2.jpg" alt="" class="img2">
+		<img src="image/变形练习1/1/images/3.jpg" alt="" class="img3">
+		<img src="image/变形练习1/1/images/4.jpg" alt="" class="img4">
+		<img src="image/变形练习1/1/images/5.jpg" alt="" class="img5">
+	</div>
+	<div class="box6"></div>
+	<div class="box7"></div>
+	<div class="box8"></div>
+	<div class="box9"></div>
+	<div class="box10"></div>
+	<div class="box11"></div>
+	<div class="box12"></div>
+	<img src="image/变形练习1/1/images/5.jpg" alt="" class="img6">
+	<div class="box13"></div>
+	<div class="box14"></div>
+</body>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		$(function(){
+			var i=0
+			var autoPlay = setInterval(function(){
+				i = i + 1;
+				if(i == 360){
+					i = 0;
+				}
+				$(".box4").css("transform","rotate("+i+"deg)")
+				$(".box6").css("transform","rotate3d(1,0,0,"+i+"deg)")
+				$(".box7").css("transform","rotate3d(0,1,0,"+i+"deg)")
+				$(".box8").css("transform","rotate3d(0,0,1,"+i+"deg)")
+				$(".box9").css("transform","rotate3d(0,1,1,"+i+"deg)")
+				$(".box10").css("transform","rotate3d(1,1,1,"+i+"deg)")
+				$(".box11").css("transform","rotate3d(1,1,0,"+i+"deg)")
+				$(".box12").css("transform","rotate3d(1,0,1,"+i+"deg)")
+				console.log(i)
+			},1.5)
+		})
+	</script>
+</html>

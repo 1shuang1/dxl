@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第五天</title>
+</head>
+<body>
+	<div style="height: 250px; text-align: center;">
+	<h1>今天复习</h1>
+	<p>↓内容如下↓</p>
+	## html 超文本标记标签<br>
+
+1. 块元素：table h1~h6 li ul ol p form div<br>
+
+    * 总是在新行上开始，占据一整行；<br>
+    * 高度，行高以及外边距和内边距都可控制；<br>
+    * 宽度始终是与浏览器宽度一样，与内容无关；<br>
+    * 它可以容纳行内元素和其他块元素。<br>
+
+2. 行内元素 a span <br>
+
+    * 和其他元素都在一行上；<br>
+    * 高，行高及外边距和内边距部分可改变；<br>
+    * 宽度只与内容有关；<br>
+    * 行内元素只能容纳文本或者其他行内元素。<br> 
+    * 不可以设置宽高，其宽度随着内容增加，高度随字体大小而改变，内联元素可以设置外边界，但是外边界对上下不起作用，只能对左右起作用，也可以设置内边界，但是内边界在ie6中不对上下起作用，只能对左右起作用<br>
+
+3. 行内块元素 img  input select textarea td<br> 
+
+    * 可以设置宽高 , 和其他元素都在一行上<br>
+    * 内边距可以设置，外边距也是可以设置的 <br>
+    
+4. pre 预定义标签/预文本标签 marquee 滚动标签 <br>
+
+## css 层叠样式表 <br>
+
+1. 元素转换<br>
+
+```css<br>
+    *{<br>
+        display: block;/*转换成块元素*/<br>
+        display: <br>inline-block;/*转换成行内块元素*/<br>
+        display: inline;/*转换成行内元素*/<br>
+        display: table-cell; /*转换成单元格*/<br>
+        text-align: center;  /*文字水平居中*/<br>
+        vertical-align: middle; /*文字垂直居中*/<br>
+    }<br>
+```
+
+2. 控制文本<br>
+
+```css<br>
+    *{<br>
+        font-size: 16px;<br>
+        font-weight: bold;<br>
+        font-family: "微软雅黑";<br>
+        font-style: italic;<br>
+        color:#ff0;<br>
+        text-align: center;<br>
+        text-decoration: line-through;<br>
+        text-indent: 2em;<br>
+        line-height: 2em;<br>
+        text-transform: capitalize;<br>
+    }
+```
+
+2. 背景<br>
+
+```css<br>
+    *{<br>
+        background-color: #fff;<br>
+        background-image: url();<br>
+        background-repeat: ;<br>
+        -webkit-background-size: ;<br>
+        background-size: ;<br>
+        background-position: center;<br>
+    }<br>
+```
+
+3. 定位<br>
+
+```css<br>
+    *{<br>
+        position: fixed; /*固定定位*/<br>
+        position: relative;/*相对定位*/<br>
+        /*被看作普通流定位模型的一部分，定位元素的位置相对于它在普通流中的位置进行移动。使用相对定位的元素不管它是否进行移动，元素仍要占据它原来的位置。移动元素会导致它覆盖其他的框。*/<br>
+        position: absolute;/*绝对定位*/<br>
+        /*相对于已定位的最近的祖先元素，如果没有已定位的最近的祖先元素，那么它的位置就相对于最初的包含块（如body）。绝对定位的框可以从它的包含块向上、右、下、左移动。绝对定位的框脱离普通流，所以它可以覆盖页面上的其他元素，可以通过设置Ｚ-Iindex属性来控制这些框的堆放次序。*/<br>
+    }<br>
+```
+
+4. 盒模型<br>
+
+盒模型包含<br>
+    * 内容 content<br>
+    * 内边距 padding<br>
+    * 边框 border<br>
+    * 外边距 margin<br>
+5. 块元素垂直水平居中，行内元素垂直水平居中<br>
+
+```css<br>
+    /*块元素垂直水平居中*/<br>
+    .box{<br>
+        width: 200px;<br>
+        height: 200px;<br>
+        border:1px solid red;<br>
+        position: relative;<br>
+    }<br>
+    .small{<br>
+        width: 100px;<br>
+        height: 100px;<br>
+        background-color: #00f;<br>
+        position: absolute;<br>
+        bottom:0;<br>
+        right: 0;<br>
+        top: 0;<br>
+        left: 0;<br>
+        margin:auto;<br>
+    }<br>
+    /*行内元素垂直水平居中*/<br>
+    /*加给行内元素父级*/<br>
+    .box{<br>
+            width: 200px;<br>
+            height: 200px;<br>
+            border:1px solid red;<br>
+            text-align: center;<br>
+            vertical-align: middle;<br>
+            display: table-cell;<br>
+        }<br>
+```<br>
+
+6. 浮动<br>
+
+```css<br>
+    *{<br>
+        float:left;<br>
+        float:right;<br>
+        float:none;<br>
+        clear：both/left/right/none;<br>
+    }<br>
+```
+
+7. 其他<br>
+
+```css<br>
+    *{<br>
+        list-style: none;/*去掉列表点样式*/<br>
+        width:100%;<br>
+        height:100%;<br>
+        min-width: 100px;<br>
+        max-width: 100px;<br>
+        min-height: 100px;<br>
+        box-sizing: ;<br>
+        cursor:pointer;<br>
+        outline:;<br>
+        opacity:;<br>
+        overflow: hidden;<br>
+        overflow-x: hidden;<br>
+        overflow-y: hidden;<br>
+        display: none;<br>
+        visibility: hidden;<br>
+    }<br>
+```
+
+8. css3<br>
+
+```css<br>
+    *{<br>
+        text-shadow:;/*文本的阴影效果*/<br>
+        box-shadow: ;/*盒子的阴影效果*/<br>
+        border-radius: ;/*边框的弧度*/<br>
+        transition: all 2s;/*过渡效果*/<br>
+    }
+```
+
+	<form action="100.html">
+	<div class="box1"><a href="100.html"><input type="button" value="返回"></a></div>
+	<div class="box1"><a href="index.html"><input type="button" value="首页"></a></div>
+	</form>
+</body>
+</html>

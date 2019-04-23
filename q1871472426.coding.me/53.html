@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>53天</title>
+</head>
+<style>
+	div{
+		height: 100px;
+		width: 100px;
+		background: #131415;
+	}
+</style>
+<body>
+	<div></div>
+</body>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		$("div").click(function(){
+			$(this).animate({"marginLeft":"500px"},2000,function(){
+				$(this).animate({"marginTop":"200px"},500,function(){
+					$(this).css({"background":"green"})
+				})
+			})
+		})
+	</script>
+</html>

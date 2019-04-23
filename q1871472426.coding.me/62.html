@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>62天</title>
+	<style>
+		img:hover{
+    		-webkit-transform:rotateY(180deg);
+    		transform:rotate3d(0,1,0,180deg);
+		}
+		.box:hover{
+			transform:rotate3d(1,0,0,0deg);
+		}
+		*{
+				margin: 0;
+				padding: 0;
+			}
+		.box{
+			color: red;
+			background-image: url(image/变形练习1/2D多照片墙/2D多照片墙/img/3.jpg);
+			margin: 0 auto;
+			transform-style:preserve-3d;
+			transition:transform 2s;
+			height: 200px;
+			width: 200px;
+			border:1px solid red;
+			transform:rotate3d(1,0,0,180deg);
+			border-radius: 100%;
+		}
+		.img4{
+			transition:transform 2s;
+			width: 100px;
+			height: 100px;
+			transform:rotate3d(1,1,1,0deg);
+		}
+		.box1{
+			margin: 50px auto;
+			background: green;
+			transform-style:preserve-3d;
+			transition:transform 2s;
+			height: 100px;
+			width: 100px;
+			border:1px solid red;
+			transform:rotate3d(0,1,0,0deg);
+			border-radius: 100%;
+		}
+		.box1:hover{
+			transform:rotate3d(0,1,0,180deg);
+		}
+		.box2{
+			background: blue;
+			margin: 25px auto;
+			transform-style:preserve-3d;
+			transition:transform 2s;
+			height: 50px;
+			width: 50px;
+			border:1px solid red;
+			transform:rotate3d(1,1,1,0deg);
+			border-radius: 100%;
+		}
+		.box2:hover{
+			transform:rotate3d(1,1,1,180deg);
+		}
+	</style>
+</head>
+<body>
+		<div class="box">
+			<div class="box1">
+				<div class="box2"></div>
+			</div>
+			<!-- <img src="image/变形练习1/2D多照片墙/2D多照片墙/img/3.jpg" alt="" class="img4"> -->
+		</div>
+</body>
+</html>

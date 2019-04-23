@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>67天</title>
+	<style>
+		.box{
+			position: relative;
+			width: 1500px;
+			height: 536px;
+			background-image: url(image/绿钻素材/绿钻素材/images/img/bg1.jpg);
+		}
+		.box1{
+			position: absolute;
+			right: 150px;
+			top: 20px;
+			background-image: url(image/绿钻素材/绿钻素材/images/img/ani.png);
+			width: 350px;
+			height: 350px;
+			animation: rotate 5s infinite linear;
+		}
+		@keyframes rotate{
+			form{transform: rotate(0deg)}
+			to{transform: rotate(360deg)}
+		}
+		.box2{
+			position: absolute;
+			top: 25px;
+			left: 25px;
+			line-height: 350px;
+			background-image: url(image/绿钻素材/绿钻素材/images/img/ani.png);
+			width: 300px;
+			height: 300px;
+			animation: rotatea 5s infinite linear;
+			background-position: -371px -25px;
+		}
+		@keyframes rotatea{
+			form{transform: rotate(0deg)}
+			to{transform: rotate(-720deg)}
+		}
+		.box3{
+			position: absolute;
+			top: 25px;
+			left: 25px;
+			line-height: 300px;
+			background-image: url(image/绿钻素材/绿钻素材/images/img/logo_3ie.png);
+			width: 250px;
+			height: 250px;
+			animation: rotateae 5s infinite linear;
+			background-size: 250px;
+
+		}
+		@keyframes rotateae{
+			form{transform: rotate(0deg)}
+			to{transform: rotate(360deg)}
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="box1">
+			<div class="box2">
+				<div class="box3"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

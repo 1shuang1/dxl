@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>点击</title>
+	<style>
+		li{
+			list-style: none;
+		}
+		.list{
+			/*background-color: #fff;*/
+		}
+		.list p{
+		/*	height: 30px;*/
+			background-color: #aaa;
+			margin-top: 20px;
+			margin-bottom: 0;
+		}
+		.item{
+			margin-top: 20px;
+			background-color: #aaa;
+		}
+		.list-ruanjian,.list-wangluo{
+			display: none;
+			/*visibility: hidden;*/
+		}
+		.list-ruanjian-js{
+			display: none;
+		}
+		.title{
+			background-image: url(image/三角.gif);
+			padding-left: 20px;
+			background-position: left center;
+			background-repeat: no-repeat;
+		}
+		.active{
+			background-image: url(image/三角下.gif);
+		}
+	</style>
+</head>
+<body>
+	<ul class="list">
+		<li>
+			<p class="title">软件工程</p>
+			<ul class="list-ruanjian">
+				<li class="item">sql server</li>
+				<li>
+					<p>javascript</p>
+					<ul class="list-ruanjian-js">
+						<li class="item">变量</li>
+						<li class="item">if语句</li>
+					</ul>
+				</li>
+				<li class="item">jquery</li>
+				<li class="item">css+div</li>
+			</ul>
+		</li>
+		<li>
+			<p>网络工程</p>
+			<ul class="list-wangluo">
+				<li class="item">思科</li>
+				<li class="item">华为</li>
+				<li class="item">思科</li>
+			</ul>
+		</li>
+	</ul>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		// $(function(){})==$(document).ready(function(){}) 
+		// 等待文档加载完毕
+		$(function(){
+			$("p").click(function(){
+				$(this).next().slideToggle()
+			})
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第三十七天</title>
+</head>
+	<style>
+		ul{
+			list-style: none;
+		}
+		#demol li{
+			height: 100px;
+			width: 500px;
+			text-align: center;
+			line-height: 100px;
+			background: blue;
+			margin-top: 10px;
+		}
+		.l1{
+			display: none;
+		}
+	</style>
+<body>
+	<input type="text" value="" id="txt_value" placeholder="请输入要添加的用户名">
+	<input type="text" value="" id="txt2" placeholder="请输入要添加第几个">
+	<button class="b1">向后面添加</button>
+	<button class="b2">向前面追加内容</button>
+	<ul id="demol">
+		<li>1</li>
+	</ul>
+</body>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		$(".b2").click(function(){
+			var v=$("<li class='l1'>"+$("#txt_value").val()+"</li>");
+			var i=$("#txt2").val();
+			clickelement.before(v);
+			v.slideDown(1000)
+		})
+		$(".b1").click(function(){
+			var v=$("<li class='l1'>"+$("#txt_value").val()+"</li>");
+			var i=$("#txt2").val();
+			clickelement.after(v);
+			v.slideDown(1000)
+		})
+		var clickelement;
+		$("#demol li").click(function(){
+			clickelement=$(this);
+		})
+	</script>
+</html>

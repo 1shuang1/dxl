@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第三十八天</title>
+	<style>
+		select{
+			width: 100px;
+			float: left;
+		}
+		.box{
+			width: 450px;
+			margin:0 auto;
+		}
+		button{
+			width: 50px;
+		}
+		.box2{
+			float: left;
+			width: 50px;
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<select id="xia" size="6px">
+		<option value="香蕉">香蕉</option>
+		<option value="橘子">橘子</option>
+		<option value="葡萄">葡萄</option>
+		<option value="蓝莓">蓝莓</option>
+	</select>
+	<div class="box2">
+	<button id="an">></button>
+	<button id="an1">>>></button>
+	<button id="an2"><</button>
+	<button id="an3"><<<</button>
+	</div>
+	<select id="xia1" size="6px">
+		
+	</select>
+</div>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		$("#an").click(function(){
+			clickelement.remove();
+			$("#xia1").append(clickelement);
+		})
+		$("#an2").click(function(){
+			
+			clickelement1.remove();
+			$("#xia").append(clickelement1);
+		})
+		$("#an1").click(function(){
+			var v=$("option");
+			v.remove();
+			$("#xia1").append(v);
+
+		})
+		$("#an3").click(function(){
+			var v=$("option");
+			v.remove();
+			$("#xia").append(v);
+		})
+		var clickelement;
+		// $("#xia option").click(function(){
+		// 	clickelement=$(this);
+		// })
+		$("#xia1").on('click','option',function(){	   
+			clickelement1=$(this);
+		})
+		$("#xia").on('click','option',function(){	   
+			clickelement=$(this);
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第二十九天</title>
+	<style>
+		*{
+			padding: 0;
+			margin:0;
+		}
+		.big img{
+			width: 600px;
+			height: 300px;
+		}
+		li{
+			list-style: none;
+			float: left;
+			margin-left: 5px;
+		}
+		li img{
+			width: 200px;
+			height: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div class="big">
+		<img src="" alt="" id="im_p">
+	</div>
+	<div class="strom">
+		<ul>
+			<li><img src="image/11.jpg"></li>
+			<li><img src="image/12.jpg"></li>
+			<li><img src="image/13.jpg"></li>
+			<li><img src="image/14.jpg"></li>
+			<li><img src="image/15.jpg"></li>
+		</ul>
+	</div>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		$(".strom>ul img").click(function(){
+			var push=$(this).attr("src");
+			$("#im_p").attr("src",push);
+		})
+		
+	</script>
+</body>
+</html>

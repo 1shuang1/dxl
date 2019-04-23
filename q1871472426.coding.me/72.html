@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>72天</title>
+	<style>
+		.box{
+			width: 50px;
+			height: 50px;
+			background: red;
+			animation: acti 0.3s ease-in infinite alternate;
+			border-radius: 100%;
+			position: relative;
+			left: 300px;
+			top: 280px;
+		}
+		@keyframes acti {
+			0%{transform: translate(0px);}
+			100%{transform: translate(0,200px);}
+		}
+		.box1,.box2,.box3{
+			width: 50px;
+			height: 25px;
+			background: #999;
+			animation: activ 0.3s ease-in infinite alternate;
+			border-radius: 100%;
+			position: relative;
+			left: 300px;
+			top: 540px;
+		}
+		@keyframes activ {
+			0%{opacity: 0.2;transform: scale(1);}
+			100%{opacity: 0.5;transform: scale(0.8);}
+		}
+		
+		.box2,.box22{
+			margin-left: 200px;
+			animation: activ 0.3s ease-in 0.2s infinite alternate;
+		}
+		.box22{
+			width: 50px;
+			height: 50px;
+			animation: acti 0.3s ease-in 0.1s infinite alternate;
+			border-radius: 100%;
+			position: relative;
+			left: 300px;
+			top: 280px;
+			background: blue;
+		}
+		.box3,.box33{
+			animation: activ 0.3s ease-in 0.2s infinite alternate;
+			margin-left: 300px;
+		}
+		.box33{
+			width: 50px;
+			height: 50px;
+			animation: acti 0.3s ease-in 0.2s infinite alternate;
+			border-radius: 100%;
+			position: relative;
+			left: 300px;
+			top: 280px;
+			background: green;
+		}
+	</style>
+</head>
+<body>
+	<div class="box1"></div>
+	<div class="box"></div>
+	<div class="box2"></div>
+	<div class="box22"></div>
+	<div class="box3"></div>
+	<div class="box33"></div>
+</body>
+</html>

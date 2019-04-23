@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>医家</title>
+	<style>
+		*{
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		8、	margin:0;
+			padding: 0;
+		}
+		
+		.box{
+			width: 100%;
+			height: 100px;
+		}
+		.center{
+			width: 1366px;
+			margin: 0 auto;
+			position: relative;
+		}
+		.logo{
+			width: 200px;
+			position: absolute;
+			top: 30px;
+			left: 100px;
+			z-index: 3;
+			animation: yidong 1s forwards;
+		}
+		@keyframes yidong{
+			0%{transform: translate(0px,50px);opacity: 0;}
+			100%{transform: translate(0px,0px);opacity: 1;}
+		}
+		.box p{
+			height: 100px;
+			line-height: 100px;
+			position: absolute;
+			right: 200px;
+			font-size: 12px;
+		}
+		.box .geren{
+			color: #1682de;
+			display: block;
+			text-decoration: none;
+			height: 100px;
+			line-height: 100px;
+			position: absolute;
+			right: 150px;
+			font-size: 12px;
+			font-weight: bold;
+		}
+		.box1{
+			width: 100%;
+			height: 500px;
+			overflow: hidden;
+		}
+		.box1 img{
+			width: 1366px;
+		}
+		.list{
+			transform: translate(0px,0px);
+			transition: all 1s;
+			width: 4100px;
+			list-style: none;
+			height: 500px;
+		}
+		.list li{
+			width: 1366px;
+			height: 500px;
+			background-size: 1366px;
+			float: left;
+			position: relative;
+			cursor: pointer;
+		}
+		.list li:nth-child(1){
+			background-image: url(image/医家/img/slide_img_1.jpg);
+		}
+		.list li:nth-child(2){
+			background-image: url(image/医家/img/slide_img_2.jpg);
+		}
+		.list li:nth-child(3){
+			background-image: url(image/医家/img/slide_img_3.jpg);
+		}
+		.list li p:nth-child(1){
+			position: absolute;
+			font-size: 45px;
+			top: 227px;
+			left:400px;
+			font-family: 宋体;
+		}
+		.f1{
+			color: #1682de;
+			font-size: 65px;
+			font-weight: bold;
+		}
+		.list li p:nth-child(2){
+			position: absolute;
+			font-size:23px;
+			top: 335px;
+			left:500px;
+			font-family: 宋体;
+		}
+		.list1{
+			list-style: none;
+			position: absolute;
+			bottom: 0px;
+			width: 130px;
+			left: 600px;
+		}
+		.list1 li{
+			width: 20px;
+			height: 20px;
+			border: 2px white solid;
+			background:  #1682de;
+			float: left;
+			margin-left: 10px;
+			cursor: pointer;
+		}
+		.list1 .active1{
+			background: red;
+			width: 22px;
+			height: 22px;
+			margin-top: -3px;
+		}
+		.header{
+			z-index: 10;
+			display: none;
+			height: 50px;
+			width: 100%;
+			position: fixed;
+			top: 0px;
+		}
+		.header-list{
+			margin-left: 30px;
+			list-style: none;
+			width: 100%;
+			height: 50px;
+
+		}
+		.header-list li{
+			width:10%;
+			height: 50px;
+			line-height: 50px;
+			float: left;
+			text-align: center;
+			color: #999;
+		}
+		.active{
+			background: white;
+		}
+		.header1{
+			height: 50px;
+			width: 100%;
+			background:linear-gradient(180deg,#666,#000);
+			margin-top: 30px;
+		}
+		.header1-list{
+			height: 50px;
+			list-style: none;
+			margin-left: 450px;
+		}
+		.header1-list li{
+			width:10%;
+			height: 50px;
+			line-height: 50px;
+			float: left;
+			text-align: center;
+			color: #999;
+		}
+		.header1-list li:hover{
+			background: white;
+		}
+		.kuaisu{
+			margin-top: 100px;
+			height: 150px;
+		}
+		.kuaisu p{
+			font-family: 宋体;
+			font-size: 50px;
+			text-align: center;
+		}
+		fieldset{
+			margin: 0 auto;
+			width: 600px;
+			border-bottom: none;
+			border-left: none;
+			border-right: none;
+			border-top:1px #999 solid;
+		}
+		.len{
+			width: 60px;
+			margin:0 auto;
+		}
+		.len img{
+			width: 40px;
+			margin-left: 10px;
+		}
+		.sichuan{
+			width: 100%;
+			height: 400px;
+		}
+		.yuyue{
+			animation: yidong 1s forwards;
+		}
+		.sichuan .left{
+			width: 300px;
+			height: 300px;
+			position: absolute;
+			left: 160px;
+			background: white;
+			box-shadow:  2px 2px 5px #999;
+		}
+		.left img{
+			position: absolute;
+			left: 20px;
+			top: 30px;
+		}
+		.left p{
+			position: absolute;
+			left: 55px;
+			top: 30px;
+			font-size: 20px;
+		}
+		.left font{
+			font-size: 17px;
+			font-family: 宋体;
+		}
+		.zuoyidong{
+			animation: zuoyidong 1s forwards;
+		}
+		@keyframes zuoyidong{
+			0%{transform: translate(-50px,0px);opacity: 0;}
+			100%{transform: translate(0px,0px);opacity: 1;}
+		}
+		.sichuan .right{
+			width: 300px;
+			position: absolute;
+			right: 360px
+		}
+		.right p{
+			position: absolute;
+			font-size: 20px;
+		}
+		.right font{
+			font-size: 17px;
+			font-family: 宋体;
+		}
+		.right img{
+			width:600px;
+			position: absolute;
+			top: 50px;
+		}
+		.youyidong{
+			animation: youyidong1 1s forwards;
+		}
+		@keyframes youyidong1{
+			0%{transform: translate(50px,0px);opacity: 0;}
+			100%{transform: translate(0px,0px);opacity: 1;}
+		}
+		.jingzhun{
+			margin-top: 100px;
+			height: 150px;
+		}
+		.jingzhun p{
+			font-family: 宋体;
+			font-size: 50px;
+			text-align: center;
+		}	
+		.yuyue1{
+			animation: yidongx 1s forwards;
+		}
+		@keyframes yidongx{
+			0%{transform: translate(0px,50px);opacity: 0;}
+			100%{transform: translate(0px,0px);opacity: 1;}
+		}
+		.yiyuan{
+			height: 230px;
+			margin-top: 100px;
+		}
+		.xuan{
+			width: 50px;
+			padding: 5px;
+			border: 1px solid #999;
+			border-bottom: none;
+			background: #fff;
+			position: absolute;
+			top: -33px;
+			font-size: 12px;
+			text-align: center;
+			line-height: 22px;
+		}
+		.dengji{
+			width: 300px;
+			margin-left: 30px;
+			margin-top: 10px;
+			height: 30px;
+		}
+		.dengji span{
+			float: left;
+			font-weight: bold;
+		}
+		.dengji p{
+			float: left;
+		}
+		.quan{
+			background: #2d78be;
+			width: 40px;
+			text-align: center;
+			float: left;
+			color: white;
+		}
+		.dengji li{
+			float: left;
+			font-size: 12px;
+			line-height: 30px;
+			margin-left: 10px;
+			position: relative;
+		}
+		.dengji li p{
+			float: left;
+			font-size: 12px;
+			cursor: pointer;
+			margin-top: 2px;
+		}
+		.dengji li p:hover{
+			color: #2d78be;
+		}
+		.dengji li img{
+			float: left;
+			margin-top: 5px;
+		}
+		.yincang{
+			width: 500px;
+			margin-top: 50px;
+			margin-left: 20px;
+			height: 20px;
+		}
+		.yincang div{
+			float: left;
+			height: 20px;
+			font-size: 12px;
+			line-height: 20px;
+			position: relative;
+			margin-left: 10px;
+		}
+		.yincang span{
+			font-size: 12px;
+			color: red;
+			width: 18px;
+			height: 18px;
+			text-align: center;
+			line-height: 18px;
+			display: none;
+			position: absolute;
+			right: 0px;
+			top: 0px;
+		}
+		.yincang span:hover{
+			border: 1px solid #999;
+		}
+		.sou{
+			padding: 10px 5px 5px 10px;
+			width: 30px;
+			height: 20px;
+			font-size: 12px;
+			background: #2d78be;
+			margin-left:30px ;
+			border-radius: 5px;
+			color: white;
+			cursor: pointer;
+		}
+		.swing{
+			width: 250px;
+			height: 300px;
+			border: 1px solid #999;
+			border-radius: 5px;
+			margin-left: 30px;
+			position: relative;
+			background: #eee;
+			margin-top: 30px;
+			display: none;
+		}
+		.swing img{
+			position: absolute;
+			top: 5px;
+			left: 20px;
+			width: 210px;
+			height: 150px
+		}
+		.swing div{
+			width: 60px;
+			height: 20px;
+			font-size: 12px;
+			margin:20px auto;
+			border:1px solid #999;
+			padding: 2px 7px 2px 7px;
+			line-height: 20px;
+			cursor: pointer;
+		}
+		.xuanzhuan{
+			display: block;
+			animation: xuanzhuan 1s forwards;
+			transform-origin:50% 0%;
+		}
+		@keyframes xuanzhuan{
+			0%{transform: rotate(-90deg);}
+			20%{transform: rotate(15deg);}
+			40%{transform: rotate(-15deg);}
+			60%{transform: rotate(10deg);}
+			80%{transform: rotate(-10deg);}
+			100%{transform: rotate(0deg);}
+		}
+		.shou{
+			width: 50px;
+			height: 30px;
+			font-size:12px;
+			color:  #2d78be;
+			cursor: pointer;
+			line-height: 30px;
+			position: absolute;
+			right: 0px;
+			display: none;
+		}
+		.gonggao{
+			width: 100%;
+			height: 700px;
+			background: #eff3f4;
+			border: 1px solid #eff3f4;
+		}
+		.jingzhun3,.jingzhun4{
+			margin-top: 100px;
+			height: 150px;
+		}
+		.jingzhun3 p,.jingzhun4 p{
+			font-family: 宋体;
+			font-size: 50px;
+			text-align: center;
+		}	
+		.yuyue3,.yuyue4{
+			animation: yidongy 1s forwards;
+		}
+		@keyframes yidongy{
+			0%{transform: translate(0px,50px);opacity: 0;}
+			100%{transform: translate(0px,0px);opacity: 1;}
+		}
+		.gonggao-list{
+			width: 500px;
+			height: 300px;
+			position: absolute;
+			right: 150px;
+			top: 180px;
+			font-size: 12px;
+		}
+		.gonggao-list div{
+			background:#f4f4f4;
+			width: 500px;
+			height: 30px;
+			line-height: 30px;
+			margin-top: 10px;
+			box-shadow: #999 0px 1px 0px;
+			position: relative;
+		}
+		.jiankang{
+			width: 100%;
+			height: 750px;
+		}
+		.jiankang li{
+			width: 25%;
+			height: 284.5px;
+			float: left;
+			position: relative;
+		}
+		.jiankang .image1{
+			width: 100%;
+			position: absolute;
+			top: 0px;
+		}
+		.jiankang li span{
+			position: absolute;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			background: black;
+			opacity: 0.3;
+		}
+		.suofang{
+			animation: suofang 1s forwards;
+		}
+		@keyframes suofang{
+			0%{transform: scale(0);}
+			100%{transform: scale(1);}
+		}
+		.suofang1{
+			animation: suofan 1s forwards;
+		}
+		@keyframes suofan{
+			0%{transform: scale(1);}
+			100%{transform: scale(0);}
+		}
+		.xin{
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			width: 30px;
+			height: 30px;
+			background: white;
+			border-radius: 100%;
+			overflow: hidden;
+		}
+		.xin img{
+			width: 20px;
+			margin-top: 7px;
+			margin-left: 5px;
+		}
+		.wai{
+			transform: scale(0);
+			width: 100%;
+			height: 100%;	
+			color: white;
+		}
+		.p1{
+			position: absolute;
+			top: 60px;
+			left: 30px;
+			font-size: 20px;
+		}
+		.p2{
+			font-size: 12px;
+			width: 80%;
+			position: absolute;
+			top: 100px;
+			left: 30px;
+		}
+		.shequ{
+			width: 100%;
+			height: 550px;
+		}
+		.jingzhu{
+			margin-top: 100px;
+			height: 150px;
+		}
+		.jingzhu p{
+			font-family: 宋体;
+			font-size: 50px;
+			text-align: center;
+		}	
+		.boy-left{
+			width: 50%;
+			height: 300px;
+			position: relative;
+			float: left;
+		}
+		.xz{
+			width: 200px;
+			height: 200px;
+			background-image: url(image/医家/img/tou3.jpg);
+			position: absolute;
+			top: 50px;
+			left: 50px;
+			border-radius: 100%;
+		}
+		.xz:hover{
+			animation: xuazhuan 1s forwards;
+		}
+		@keyframes xuazhuan{
+			0%{transform: rotate(0deg);opacity: 0;}
+			100%{transform: rotate(360deg);opacity: 1;}
+		}
+		.pp1{
+			width: 310px;
+			position: absolute;
+			top: 100px;
+			right: 100px;
+		}
+		.jiuzhen{
+			position: absolute;
+			bottom: 60px;
+			right: 110px;
+		}
+		.foot{
+			background: #262828;
+			width: 100%;
+			height: 200px;
+		}
+		.foot img{
+			position: absolute;
+			top: 30px;
+			width: 200px;
+			left: 550px;
+		}
+		.foot p{
+			color: white;
+			position: absolute;
+			left: 500px;
+			bottom: 20px;
+		}
+		.dingbu{
+			width: 50px;
+			height: 50px;
+			background: #1668b0;
+			border-radius: 5px;
+			text-align: center;
+			line-height: 50px;
+			color: white;
+			position: fixed;
+			right: 30px;
+			bottom: 100px;
+			text-decoration: none;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="center">
+			<a href="#"><img src="image/医家/img/logo1.png" alt="" class="logo"></a>
+			<p>欢迎来到医家网！</p>
+			<a href="#" class="geren">个人中心</a>
+		</div>
+	</div>
+	<div class="box1">
+		<div class="center">
+			<div class="box1">
+				<ul class="list">
+					<li><p>一家子一辈子的<font class="f1">健康管家</font></p><p>即时、便捷、高效的预约挂号助手</p></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<ul class="list1">
+					<li class="active1"></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="header">
+		<ul class="header-list">
+			<li>快速预约</li>
+			<li>精准预测</li>
+			<li>公告栏</li>
+			<li>健康咨询</li>
+			<li>社区</li>
+		</ul>
+	</div>
+	<div class="header1">
+		<div class="center">
+			<ul class="header1-list">
+				<li>快速预约</li>
+				<li>精准预测</li>
+				<li>公告栏</li>
+				<li>健康咨询</li>
+				<li>社区</li>
+			</ul>
+		</div>
+	</div>
+	<div class="kuaisu">
+		<div class="center">
+			<p>快速预约</p>
+			<br>
+			<fieldset>
+				<legend class="len"><img src="image/医家/img/icon.png" alt=""></legend>
+			</fieldset>
+		</div>
+	</div>
+	<div class="sichuan">
+		<div class="center">
+			<div class="left">
+				<img src="image/医家/img/QQ图片20180525164100.png" alt="">
+				<p>四川 <font>成都</font></p>
+				<input list="cars" placeholder="请选择医院" style="padding: 10px;width: 225px;position: absolute;top: 80px;left: 30px;">
+				<datalist id="cars">
+					<option value="请选择医院">请选择医院</option>
+					<option value="xxxxxxxxxx">xxxxxxxxxx</option>
+					<option value="cccccccccc">cccccccccc</option>
+				</datalist>
+				<input list="cars1" placeholder="请选择科室" style="padding: 10px;width: 225px;position: absolute;top: 140px;left: 30px;">
+				<datalist id="cars1">
+					<option value="请选择科室">请选择科室</option>
+					<option value="请选择科室">请选择科室</option>
+					<option value="请选择科室">请选择科室</option>
+				</datalist>
+				<input type="submit" value="快速挂号" style="background: #2d78be;border: none;padding: 10px;border-radius: 5px;color: white;position: absolute;bottom: 65px;left: 100px;">
+				<a href="#" style="text-decoration: none;color:orange;font-size: 12px;position: absolute;bottom: 20px;left: 30px; "><i>帮您快速挂号，省时又省心!</i></a>
+			</div>
+			<div class="right">
+				<p>如何<font>网上预约挂号？</font></p>
+				<img src="image/医家/img/liucheng1.png" alt="">
+			</div>
+		</div>
+	</div>
+	<div class="jingzhun">
+		<div class="center">
+			<p>精准预约</p>
+			<br>
+			<fieldset>
+				<legend class="len"><img src="image/医家/img/icon.png" alt=""></legend>
+			</fieldset>
+		</div>
+	</div>
+	<div class="yiyuan">
+		<div class="center" style="border-top: 1px solid #999;">
+			<div class="xuan">选医院</div>
+			<div class="dengji">
+				<span>医院等级&nbsp;</span>
+				 <p>|&nbsp;</p>
+				 <div class="quan">全部</div>
+				 <ul class="quan-list" style="list-style: none; width: 450px;">
+				 	<li><p>三级医院</p>&nbsp;&nbsp;|</li>
+				 	<li><p>二级医院</p>&nbsp;&nbsp;|</li>
+				 	<li><p>一级医院</p>&nbsp;&nbsp;|</li>
+				 </ul>
+			</div>
+			<div class="dengji">
+				<span>医院位置&nbsp;</span>
+				 <p>|&nbsp;</p>
+				 <div class="quan">全部</div>
+				 <ul class="quan-list1" style="list-style: none; width: 1050px;">
+				 	<li><p>武侠区</p>&nbsp;&nbsp;|</li>
+				 	<li><p>高新区</p>&nbsp;&nbsp;|</li>
+				 	<li><p>青年区</p>&nbsp;&nbsp;|</li>
+				 	<li><p>金牛区</p>&nbsp;&nbsp;|</li>
+				 	<li><p>锦江区</p>&nbsp;&nbsp;|</li>
+				 	<li><p>温江区</p>&nbsp;&nbsp;|</li>
+				 	<li><p>新都区</p>&nbsp;&nbsp;|</li>
+				 	<li><p>成华区</p>&nbsp;&nbsp;|</li>
+				 	<li><p>龙泉驿区</p>&nbsp;&nbsp;|</li>
+				 	<li><p>青白江区</p>&nbsp;&nbsp;|</li>
+				 	<li><p>双流县</p>&nbsp;&nbsp;|</li>
+				 	<li><p>金堂县</p>&nbsp;&nbsp;|</li>
+				 	<li><p>新津县</p>&nbsp;&nbsp;|</li>
+				 </ul>
+			</div>
+			<div class="dengji">
+				<span>医院科室&nbsp;</span>
+				 <p>|&nbsp;</p>
+				 <div class="quan">全部</div>
+				 <ul class="quan-list2" style="list-style: none; width: 1050px;height: 30px;">
+				 	<li><img src="image/医家/img/1.jpg" alt=""><p>内科</p>&nbsp;&nbsp;|</li>
+				 	<li><img src="image/医家/img/2.jpg" alt=""><p>妇产科</p>&nbsp;&nbsp;|</li>
+				 	<li><img src="image/医家/img/3.jpg" alt=""><p>男科</p>&nbsp;&nbsp;|</li>
+				 	<li><img src="image/医家/img/4.jpg" alt=""><p>儿科</p>&nbsp;&nbsp;|</li>
+				 	<li><img src="image/医家/img/5.jpg" alt=""><p>骨科</p>&nbsp;&nbsp;|</li>
+				 	<li><img src="image/医家/img/6.jpg" alt=""><p>眼科</p>&nbsp;&nbsp;|</li>
+				 	<li><img src="image/医家/img/7.jpg" alt=""><p>耳鼻咽喉头颈科</p>&nbsp;&nbsp;|</li>
+				 	<li><img src="image/医家/img/8.jpg" alt=""><p>皮肤科</p>&nbsp;&nbsp;|</li>
+				 	<li><img src="image/医家/img/9.jpg" alt=""><p>肿瘤科</p>&nbsp;&nbsp;|</li>
+				 	<li><img src="image/医家/img/10.jpg" alt=""><p>精神科</p>&nbsp;&nbsp;|</li>
+				 </ul>
+			</div>
+			<div class="yincang">
+				<div class="dengji-box"><p></p><span>X</span></div>
+				<div class="weizji-box"><p></p><span>X</span></div>
+				<div class="keshi-box"><p></p><span>X</span></div>
+			</div>
+			<div class="sou">搜索</div>
+			<div class="shou">>>收起</div>
+			<div class="swing">
+				<img src="image/医家/img/yiyuan.jpg" alt="">
+				<p style="margin-left: 10px;margin-top: 170px;">四川大学华西临床医学</p>
+				<p style="margin-left: 10px;margin-top: 5px;font-size: 12px;">地址:成都外南国学巷37号</p>
+				<p style="margin-left: 10px;margin-top: 5px;font-size: 12px;">联系电话:028-85422120</p>
+				<div><a href="#" style="text-decoration:none;color:black;">现在预约+</a></div>
+			</div>
+		</div>
+	</div>
+	<div class="gonggao">
+		<div class="center">
+			<div class="jingzhun3">
+				<p>最新公告</p>
+				<br>
+				<fieldset>
+					<legend class="len"><img src="image/医家/img/icon.png" alt=""></legend>
+				</fieldset>
+			</div>
+			<img src="image/医家/img/news.png" alt="" style="width: 420px;float: left;">
+			<div class="gonggao-list">
+				<div>
+					<img src="image/医家/img/red.jpg" alt="" style="float: left;position: absolute;top: 3px;">
+					<p style="float: left; position: absolute;left: 20px;">部分医院停止预约2016年04月05日号源的通知</p>
+					<span style="float: left;position: absolute;right: 10px;color: #999;">[2016-04-04]</span>
+				</div>
+				<div>
+					<img src="image/医家/img/red.jpg" alt="" style="float: left;position: absolute;top: 3px;">
+					<p style="float: left; position: absolute;left: 20px;">华西医科大学医院暂停更新号源通知</p>
+					<span style="float: left;position: absolute;right: 10px;color: #999;">[2016-04-04]</span>
+				</div>
+				<div>
+					<img src="image/医家/img/red.jpg" alt="" style="float: left;position: absolute;top: 3px;">
+					<p style="float: left; position: absolute;left: 20px;">成都军区总医院3月5日内科停诊通知</p>
+					<span style="float: left;position: absolute;right: 10px;color: #999;">[2016-04-04]</span>
+				</div>
+				<div>
+					<img src="image/医家/img/red.jpg" alt="" style="float: left;position: absolute;top: 3px;">
+					<p style="float: left; position: absolute;left: 20px;">成都市第二人民医院号源发放通知</p>
+					<span style="float: left;position: absolute;right: 10px;color: #999;">[2016-04-04]</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="jiankang">
+		<div class="center">
+			<div class="jingzhun4">
+				<p>健康咨讯</p>
+				<br>
+				<fieldset>
+					<legend class="len"><img src="image/医家/img/icon.png" alt=""></legend>
+				</fieldset>
+			</div>
+			<ul style="width: 100%;height: 450px;position: relative;list-style: none;">
+				<li>
+					<img src="image/医家/img/zixun_1.jpg" alt="" class="image1">
+					<div class="wai">
+						<span></span>
+						<div class="xin"><img src="image/医家/img/xin.png" alt=""></div>
+						<p class="p1">吸烟男士不育机会高六倍</p>
+						<p class="p2">新加坡国立大学一个医疗研究小组，将生育能力正常与不育男士的精液样本作出分析后，得出一个结论————吸烟降低精子数量，令个别精子变弱。</p>
+					</div>
+				</li>
+				<li>
+					<img src="image/医家/img/zixun_2.jpg" alt="" class="image1">
+					<div class="wai">
+						<span></span>
+						<div class="xin"><img src="image/医家/img/xin.png" alt=""></div>
+						<p class="p1">被忽视的药鴐“元凶”</p>
+						<p class="p2">降压药使脑供血量减少，导致头晕，头晕常发生于服药数小时后，应避免该时段驾车。此外，晚上服药更容易出现头晕症状，必要时咨询医生。</p>
+					</div>
+				</li>
+				<li>
+					<img src="image/医家/img/zixun_3.jpg" alt="" class="image1">
+					<div class="wai">
+						<span></span>
+						<div class="xin"><img src="image/医家/img/xin.png" alt=""></div>
+						<p class="p1">什么是经前紧张综合征？</p>
+						<p class="p2">一些妇女在经前反复出现精神紧张、抑郁、情绪淡漠、失眠、乳房胀疼等一系列身体和精神症状，医学上把这种情况称为经前期综合征。</p>
+					</div>
+				</li>
+				<li>
+					<img src="image/医家/img/zixun_4.jpg" alt="" class="image1">
+					<div class="wai">
+						<span></span>
+						<div class="xin"><img src="image/医家/img/xin.png" alt=""></div>
+						<p class="p1">有些药物不能碾碎吃</p>
+						<p class="p2">为了给宝宝喂药，不少家长都将药物碾碎，其实有些药物是不适合碾碎吃的，没有压痕的最好不要掰开，否则会影响到药效的发挥。</p>
+					</div>
+				</li>
+				<li>
+					<img src="image/医家/img/zixun_5.jpg" alt="" class="image1">
+					<div class="wai">
+						<span></span>
+						<div class="xin"><img src="image/医家/img/xin.png" alt=""></div>
+						<p class="p1">夏天也要注意哮喘</p>
+						<p class="p2">环境污染、接触到染发、烫发或擦了化妆品的大人、气温忽高忽低、上呼吸道感染、贪凉饮冷都可能引发哮喘病的复发</p>
+					</div>
+				</li>
+				<li>
+					<img src="image/医家/img/zixun_6.jpg" alt="" class="image1">
+					<div class="wai">
+						<span></span>
+						<div class="xin"><img src="image/医家/img/xin.png" alt=""></div>
+						<p class="p1">确保每年一次的体检</p>
+						<p class="p2">体检能够在疾病仍处于可以治疗的阶段及早确诊。无论是涂片检查、血压测试或是乳房X光造影检查，都应引起足够的重视。</p>
+					</div>
+				</li>
+				<li>
+					<img src="image/医家/img/zixun_7.jpg" alt="" class="image1">
+					<div class="wai">
+						<span></span>
+						<div class="xin"><img src="image/医家/img/xin.png" alt=""></div>
+						<p class="p1">如何正确的刷牙？</p>
+						<p class="p2">每天刷牙两次，每个牙面都要刷，牙刷斜45度，放在牙齿和牙龈交界的地方，左右轻轻震颤。每次最少两分钟。</p>
+					</div>
+				</li>
+				<li>
+					<img src="image/医家/img/zixun_8.jpg" alt="" class="image1">
+					<div class="wai">
+						<span></span>
+						<div class="xin"><img src="image/医家/img/xin.png" alt=""></div>
+						<p class="p1">掌握家族病史</p>
+						<p class="p2">对家族成员的健康史有清晰的了解，可以预测自己未来的健康状况，因为多种疾病都与遗传有关，特别是心脏病和癌症。</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="shequ">
+		<div class="center" style="border: 1px solid white">
+			<div class="jingzhu">
+				<p>用户社区</p>
+				<br>
+				<fieldset>
+					<legend class="len"><img src="image/医家/img/icon.png" alt=""></legend>
+				</fieldset>
+			</div>
+			<div class="boy-left">
+				<div class="xz"></div>
+				<p class="pp1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;绝地反击高V和技术VHF,健身房的胡歌和机顶盒风华谷如果哈萨克福建省口附近</p>
+				<div class="jiuzhen">
+					<p>就诊医院: <font style="color: #999;">华西医院</font></p>
+					<div>
+						<img src="image/医家/img/钟.png" alt="" style="float: left;">
+						<p style="color: #999;float: left;font-size: 14px;">2016/3/4</p>
+						<img src="image/医家/img/眼.png" alt="" style="float: left;">
+						<p style="color: #999;float: left;font-size: 14px;">2000</p>
+					</div>
+				</div>
+			</div>
+			<div class="boy-left">
+				<div class="xz"></div>
+				<p class="pp1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;绝地反击高V和技术VHF</p>
+				<div class="jiuzhen">
+					<p>就诊医院: <font style="color: #999;">第一人民医院</font></p>
+					<div>
+						<img src="image/医家/img/钟.png" alt="" style="float: left;">
+						<p style="color: #999;float: left;font-size: 14px;">2016/3/4</p>
+						<img src="image/医家/img/眼.png" alt="" style="float: left;">
+						<p style="color: #999;float: left;font-size: 14px;">2000</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="foot">
+		<div class="center" style="height: 200px;">
+			<img src="image/医家/img/logo1.png" alt="">
+			<p>Copyright © YIJIA Of ChengDu Hospital</p>
+		</div>
+	</div>
+	<a href="#" class="dingbu"><b>^</b></a>
+</body>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		$(function(){
+			// zixun
+			$(".jiankang li").hover(function(){
+				$(this).find(".wai").addClass("suofang").removeClass("suofang1");
+			},function(){
+				$(this).find(".wai").addClass("suofang1").removeClass("suofang");
+			})
+
+
+
+
+			// sousuo
+			$(".sou").click(function(){
+				$(".shou").css("display","block")
+				$(".yiyuan").css("height","600px");
+				$(".swing").addClass("xuanzhuan");
+			})
+			$(".shou").click(function(){
+				$(this).css("display","none")
+				$(".yiyuan").css("height","230px");
+				$(".swing").removeClass("xuanzhuan");
+			})
+			$(".swing div").click(function(){
+				alert("恭喜您，预约成功")
+			})
+
+
+
+			$(".yincang div span").click(function(){
+				$(this).parent().css("display","none")
+			})
+			$(".quan-list li p").click(function(){
+				var o=$(this).text();
+				$(".dengji-box p").text(o)
+				$(".dengji-box").css("display","block");	
+			})
+			$(".quan-list1 li p").click(function(){
+				var o=$(this).text();
+				$(".weizji-box p").text(o).parent().css("display","block");	
+			})
+			$(".quan-list2 li p").click(function(){
+				var o=$(this).text();
+				$(".keshi-box p").text(o).parent().css("display","block");	
+			})
+			$(".yincang div").hover(function(){
+				$(this).find("span").css("display","block");$(this).css("width","70px");
+			},function(){
+				$(this).find("span").css("display","none");$(this).css("width","50px");
+			})
+			var i = 0
+			$(".list1 li").click(function(){
+				i = $(this).index();
+				var o = i*-1366;
+				$(this).addClass("active1").siblings().removeClass("active1");
+				$(".list").css("transform","translate("+o+"px,0px)");
+				console.log(i);
+			})
+			var autoPlay = setInterval(function(){
+				i = i + 1;
+				if(i == 3){
+					i = 0;
+				}
+				var o = i*-1366;
+				$(".list1 li").eq(i).addClass("active1").siblings().removeClass("active1");
+				$(".list").css("transform","translate("+o+"px,0px)");
+			},5000)
+		})
+		$(window).scroll(function(){
+        var sc=$(this).scrollTop();
+       	 	console.log(sc);
+        	if (sc>522) {
+        		$(".header").css("display","block")
+        		$(".header1-list").css("display","none")
+        	}else if(sc<522) {
+        		$(".header").css("display","none")
+        		$(".header1-list").css("display","block")
+        	}
+        	if (sc>622) {
+        		$(".header").css("background","linear-gradient(180deg,#666,#000)")
+        	}else if(sc<622) {
+        		$(".header").css("background","none")
+        	}
+        	if (sc<650) {
+        		$(".header-list li").removeClass("active");
+        		$(".dingbu").css("display","none")
+        	}
+        	if (sc>650) {
+        		$(".dingbu").css("display","block")
+        	}
+        	if (sc>650 && sc<1221) {
+        		$(".header-list li:nth-child(1)").addClass("active").siblings().removeClass("active");
+        		$(".kuaisu").addClass("yuyue");
+        	}else if(sc<722) {
+        		$(".kuaisu").removeClass("yuyue");
+        	}
+        	if (sc>872) {
+        		$(".left").addClass("zuoyidong");
+        	}else if(sc<872) {
+        		$(".left").removeClass("zuoyidong");
+        	}
+        	if (sc>872) {
+        		$(".right").addClass("youyidong");
+        	}else if(sc<872) {
+        		$(".right").removeClass("youyidong");
+        	}
+        	if (sc>1221 && sc<1852) {
+        		$(".header-list li:nth-child(2)").addClass("active").siblings().removeClass("active");
+        		$(".jingzhun").addClass("yuyue1");
+        	}else if(sc<1221) {
+        		$(".jingzhun").removeClass("yuyue1");
+        	}
+        	if (sc>1852 && sc<2620) {
+        		$(".header-list li:nth-child(3)").addClass("active").siblings().removeClass("active");
+        		$(".jingzhun3").addClass("yuyue3");
+        	}else if(sc<1852) {
+        		$(".jingzhun3").removeClass("yuyue3");
+        	}
+        	if (sc>2620 && sc<3420) {
+        		$(".header-list li:nth-child(4)").addClass("active").siblings().removeClass("active");
+        		$(".jingzhun4").addClass("yuyue4");
+        	}else if(sc<2571) {
+        		$(".jingzhun4").removeClass("yuyue4");
+        	}
+        	if (sc>3420 && sc<3712) {
+        		$(".header-list li:nth-child(5)").addClass("active").siblings().removeClass("active");
+        	}
+        })
+	</script>
+</html>

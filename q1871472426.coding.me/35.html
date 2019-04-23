@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第三十五天</title>
+	<style>
+		*{
+			padding:0;
+			margin:0;
+		}
+		.box{
+			width: 500px;
+			margin:0 auto;
+		}	
+		ul{
+			color:white;
+			list-style: none;
+		}
+		h2{
+			font-family: 微软雅黑;
+			line-height: 46px;
+			padding-left: 50px;
+			background-image: url("image/images/h2_trigger_a.gif");
+			height: 46px;
+			width: 450px;
+		}
+		li{
+
+			display: none;
+		}
+		a{
+			color:white;
+			text-decoration: none;
+		}
+		
+		.list{background-position: 0 46px;}
+	</style>
+</head>
+<body>
+<div class="box">
+	<ul>
+		<h2><a href="">Web Design & Development?</a></h2>
+		<li><img src="image/images/d_1.png" alt=""></li>
+	</ul>
+	<ul>
+		<h2><a href="">Logo/Corporate ldentity?</a></h2>
+		<li><img src="image/images/d_1.png" alt=""></li>
+	</ul>
+	<ul>
+		<h2><a href="">Seach Engine Optimization?</a></h2>
+		<li><img src="image/images/d_1.png" alt=""></li>
+	</ul>
+	<ul>
+		<h2><a href="">Have Product to Sell?</a></h2>
+		<li><img src="image/images/d_1.png" alt=""></li>
+	</ul>
+</div>
+<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		$("h2").click(function(){
+			$(this).toggleClass("list");
+			$(this).stop().next().slideToggle();
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第三十天</title>
+	<style>
+		*{
+			padding: 0;
+			margin:0;
+			font-size: 20px;
+		}
+		ul{
+			list-style: none;
+		}
+		li{
+			background: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div class="nav">内容</div>
+	<div class="list">
+		<ul>
+			<li>1_1</li>
+			<li>1_2</li>
+			<li class="l1">1_3</li>
+			<li>1_4</li>
+			<li>1_5</li>
+		</ul>
+	</div>
+	<div class="list">
+		<ul>
+			<li>2_1</li>
+			<li>2_2</li>
+			<li>2_3</li>
+			<li>2_4</li>
+			<li>2_5</li>
+		</ul>
+	</div>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		$("li").click(function(){
+			var i = $(this).index();
+			alert("您点击了第"+(i+1)+"个li")
+		})
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>54天</title>
+</head>
+<body>
+	<video preload="metadata" controls="" loop="loop" poster="image/11.jpg" width="650px" paused="true">
+		<source src="媒体文件/1.mp4">
+		<source src="媒体文件/1.ogg">
+	</video>
+	<input type="button" class="inp" value="播放">
+	<button class="da">大</button>
+	<button class="zhong">中</button>
+	<button class="xiao">小</button>
+	<audio  controls loop>
+		<source src="媒体文件/告白气球.mp3">
+		<source src="媒体文件/告白气球.ogg">
+	</audio>
+	<input type="button" class="inpu" value="播放">
+</body>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+	$("video")[0].paused==true
+		$(".inp").click(function(){
+			if (document.querySelector("video").paused==true){
+			
+				document.querySelector("video").play();
+				$(".inp").val("暂停")
+			}else{
+				document.querySelector("video").pause();
+				$(".inp").val("播放")
+			}
+		})
+	$("audio")[0].paused==true
+		$(".inpu").click(function(){
+			if (document.querySelector("audio").paused==true){
+			
+				document.querySelector("audio").play();
+				$(".inpu").val("暂停")
+			}else{
+				document.querySelector("audio").pause();
+				$(".inpu").val("播放")
+			}
+		})
+		$(".da").click(function(){
+			$("video").css({"width":"100%"});
+		})
+		$(".zhong").click(function(){
+			$("video").css({"width":"50%"});
+		})
+		$(".xiao").click(function(){
+			$("video").css({"width":"20%"});
+		})
+	</script>
+</html>

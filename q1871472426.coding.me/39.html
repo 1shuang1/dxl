@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第三十九天</title>
+</head>
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	ul{
+		width: 3500px;
+		list-style: none;
+	}
+	li{
+		float: left;
+	}
+	.box_left,.box_right{
+		height: 50px;
+		width: 50px;
+		cursor: pointer;
+		position: relative;
+		bottom: 430px;
+		background: red;
+		text-align:center;
+		line-height: 50px;
+	}
+	.box_right{
+		position: relative;
+		bottom: 474px;
+		left: 550px;
+	}
+	.box{
+		width: 600px;
+		height: 600px;
+		overflow: hidden;
+	}
+</style>
+<body>
+	<div class="box">
+		<ul>
+			<li><img src="image/11.jpg"></li>
+			<li><img src="image/12.jpg"></li>
+			<li><img src="image/13.jpg"></li>
+			<li><img src="image/14.jpg"></li>
+			<li><img src="image/15.jpg"></li>
+		</ul>
+	</div>
+	<div class="box_left"><</div>
+	<div class="box_right">></div>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		$(".box_right").click(function(){
+			$(".box ul").prepend($(".box ul li:last"))
+			$(".box ul").css("marginLeft",-650);
+			$(".box ul").stop().animate({marginLeft:0},1000);
+		})
+		$(".box_left").click(function(){
+			$(".box ul").stop().animate({marginLeft:-650},1000,function(){
+				$(".box ul").append($(".box ul li").eq(0))
+			$(".box ul").css("marginLeft",0);
+			});
+		})
+		var autoPlay = setInterval(function(){
+			$(".box ul").stop().animate({marginLeft:-650},1000,function(){
+				$(".box ul").append($(".box ul li").eq(0))
+			$(".box ul").css("marginLeft",0);
+			});
+		},5000)
+		$(".box3").mouseenter(function(){
+			clearInterval(autoPlay)
+		}).mouseleave(function(){
+		autoPlay = setInterval(function(){
+			$(".box ul").stop().animate({marginLeft:-650},1000,function(){
+				$(".box ul").append($(".box ul li").eq(0))
+			$(".box ul").css("marginLeft",0);
+			});
+		},5000)
+		})		
+	</script>
+</body>
+</html>

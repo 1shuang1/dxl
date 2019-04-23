@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第二十二天</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		.box,.box2,.box1,.box3{
+			width: 200px;
+			height: 90px;
+			background: pink;
+			border: 2px solid white;
+			float: left;
+			text-align: center;
+			line-height: 90px;
+		}
+		ul{
+			list-style: none;
+			position: relative;
+			display: none;
+		}
+		li{
+			width: 200px;
+			height: 90px;
+			background:green;
+			border: 2px solid white;
+			text-align: center;
+			line-height: 90px;
+			position: relative;
+			right: 2px;
+			top: 2px;
+		}
+		a{
+			text-decoration: none;
+			color: #000;
+		}
+		.fu{
+			width: 200px;
+			height: 90px;
+			background:red;
+			border: 2px solid white;
+			text-align: center;
+			line-height: 90px;
+			position: absolute;
+			top:0px;
+			left: 200px;
+			display: none;
+		}
+		.fu1{
+			width: 200px;
+			height: 90px;
+			background:red;
+			border: 2px solid white;
+			text-align: center;
+			line-height: 90px;
+			position: absolute;
+			top:90px;
+			left: 200px;
+			display: none;
+		}
+		.l1{
+			position: relative;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<p>首页</p>
+		<ul class="ul1">
+			<li class="l1">
+				<a href="">首页</a>
+				<div class="fu"><a href="">a</a></div>
+				<div class="fu1"><a href="">b</a></div>
+			</li>
+			<li class="l1">
+				<a href="">首页</a>
+				<div class="fu"><a href="">c</a></div>
+				<div class="fu1"><a href="">d</a></div>
+			</li>
+			<li class="l1"> 
+				<a href="">首页</a>
+				<div class="fu"><a href="">e</a></div>
+				<div class="fu1"><a href="">f</a></div>
+			</li>
+			<li class="l1">
+				<a href="">首页</a>
+				<div class="fu"><a href="">g</a></div>
+				<div class="fu1"><a href="">h</a></div>
+			</li>
+		</ul>
+	</div>
+	<div class="box">
+		<p>视频</p>
+		<ul class="ul">
+			<li class="l1">
+				<a href="">视频</a>
+				<div class="fu"><a href="">i</a></div>
+				<div class="fu1"><a href="">j</a></div>
+			</li>
+			<li class="l1">
+				<a href="">视频</a>
+				<div class="fu"><a href="">k</a></div>
+				<div class="fu1"><a href="">l</a></div>
+			</li>
+			<li class="l1">
+				<a href="">视频</a>
+				<div class="fu"><a href="">m</a></div>
+				<div class="fu1"><a href="">n</a></div>
+			</li>
+			<li class="l1">
+				<a href="">视频</a>
+				<div class="fu"><a href="">o</a></div>
+				<div class="fu1"><a href="">p</a></div>
+			</li>
+		</ul>
+	</div>
+	<div class="box">
+		<p>教程</p>
+		<ul class="ul3">
+			<li class="l1">
+				<a href="">教程</a>
+				<div class="fu"><a href="">r</a></div>
+				<div class="fu1"><a href="">s</a></div>
+			</li>
+			<li class="l1">
+				<a href="">教程</a>
+				<div class="fu"><a href="">t</a></div>
+				<div class="fu1"><a href="">u</a></div>
+			</li>
+			<li class="l1">
+				<a href="">教程</a>
+				<div class="fu"><a href="">v</a></div>
+				<div class="fu1"><a href="">w</a></div>
+			</li>
+			<li class="l1">
+				<a href="">教程</a>
+				<div class="fu"><a href="">x</a></div>
+				<div class="fu1"><a href="">y</a></div>
+			</li>
+		</ul>
+	</div>
+	<div class="box">
+		<p>水果</p>
+		<ul class="ul4">
+			<li class="l1">
+				<a href="">水果</a>
+				<div class="fu"><a href="">z</a></div>
+				<div class="fu1"><a href="">1</a></div>
+			</li>
+			<li class="l1">
+				<a href="">水果</a>
+				<div class="fu"><a href="">2</a></div>
+				<div class="fu1"><a href="">3</a></div>
+			</li>
+			<li class="l1">
+				<a href="">水果</a>
+				<div class="fu"><a href="">4</a></div>
+				<div class="fu1"><a href="">5</a></div>
+			</li>
+			<li class="l1">
+				<a href="">水果</a>
+				<div class="fu"><a href="">6</a></div>
+				<div class="fu1">
+					<a href="">7</a>
+					<div class="fu"><a href="">6</a></div>
+					<div class="fu1"><a href="">7</a></div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		$(function(){
+			$("div").mouseenter(function(){
+				$(this).children("ul").stop().slideDown(1000);
+			}).mouseleave(function(){
+				$(this).children("ul").stop().slideUp(1000)
+				})
+			$(".l1").mouseenter(function(){
+				$(this).children("div").stop().slideDown(0);
+			}).mouseleave(function(){
+				$(this).children("div").stop().slideUp(0)
+				})
+			$(".fu1").mouseenter(function(){
+				$(this).children("div").stop().slideDown(0);
+			}).mouseleave(function(){
+				$(this).children("div").stop().slideUp(0)
+				})
+			})
+	</script>
+</body>
+</html>

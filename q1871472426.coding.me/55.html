@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>55天</title>
+	<style>
+		.t_1+input{
+			font-size: 30px;
+			color: red;
+		}
+		.t_1~input{
+			font-size:30px;
+			color: blue;
+		}
+		input[value="提交"]{
+			color: green;
+		}
+		.btn_1{
+			color: yellow;
+		}
+		input[value="窦新泷"]{
+			font-size: 50px;
+		}
+		input[name="s"]{
+			color: #534;
+		}
+		p[class$="1"]{
+			color: #999;
+		}
+		input,input[type="radio"]:checked+span{
+			margin-right: 30px;
+			color: red;
+		}
+		input:disabled{
+			border:1px solid red;
+		}
+	</style>
+</head>
+<body>
+<div>
+	<input type="text" name="username" class="t_1" value="窦新泷">
+	<input type="text" name="address" class="t_2" value="河北省秦皇岛市">
+	<input type="text" name="content" class="t_3" value="你好！">
+	<input type="button" name="submit" class="btn_1" value="提交">
+	<input type="reset" name="reset" class="btn_1" value="重置">
+	<p class="p_1">内容1</p>
+	<p class="p_1">内容2</p>
+	<p class="p_2">内容3</p>
+	<p class="p_1">内容4</p><br>
+	性别:
+	<input type="radio" checked="checked" name="sex" value="男"><span>男</span>
+	<input type="radio" name="sex" value="女"><span>女</span>
+	<br>
+	爱好：
+	<input type="checkbox" name="sex"><span>游泳</span>
+	<input type="checkbox" name="sex"><span>爬山</span>
+	<input type="checkbox" name="sex"><span>运动</span>
+	<input type="checkbox" name="sex"><span>看书</span>
+	<input type="checkbox" name="sex"><span>音乐</span>
+	<input type="text" disabled="disabled">
+</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>66天</title>
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+			background: red;
+			margin-top: 10px;
+			font-size:32px;
+			color: yellow;
+			line-height: 200px;
+			text-align: center;
+		}
+		div:nth-child(1){
+			transition: transform 5s 2s linear;
+		}
+		div:nth-child(2){
+			transition: transform 5s 2s ease;
+		}
+		div:nth-child(3){
+			transition: transform 5s 2s ease-in;
+		}
+		div:nth-child(4){
+			transition: transform 5s 2s ease-out;
+		}
+		div:nth-child(5){
+			transition: transform 5s 2s ease-in-out;
+		}
+	</style>
+</head>
+<body>
+	<div class="d1">linear</div>
+	<div class="d2">ease</div>
+	<div class="d3">ease-in</div>
+	<div class="d4">ease-out</div>
+	<div class="d5">ease-in-out</div>
+</body>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+			$("body").click(function(){
+				$("div").css("transform","translate(800px,0px)")
+			})
+	</script>
+</html>

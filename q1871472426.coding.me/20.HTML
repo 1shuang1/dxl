@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box1{
+			width:200px;
+			height: 100px;
+			float: left;
+			text-align: center;
+			line-height: 100px;
+			margin-left: 2px;
+			overflow:hidden;
+		}
+		.box2{
+			width:200px;
+			height: 100px;
+			background-color: #0f0;
+			float: left;
+			text-align: center;
+			line-height: 100px;
+			margin-left: 2px;
+			overflow:hidden;
+		}
+		.box3{
+			width:200px;
+			height: 100px;
+			background-color: #0f0;
+			float: left;
+			text-align: center;
+			line-height: 100px;
+			margin-left: 2px;
+			overflow:hidden;
+		}
+		.box4{
+			width:200px;
+			height: 100px;
+			background-color: #0f0;
+			text-align: center;
+			line-height: 100px;
+		}
+		.box5{
+			width:200px;
+			height: 100px;
+			background-color: #f00;
+			text-align: center;
+			line-height: 100px;
+		}
+		.box6{
+			width:200px;
+			height: 200px;
+		}
+		.box7{
+			width:200px;
+			height: 200px;
+		}
+		.box8{
+			width:200px;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box1">
+		<div class="box6">
+			<div class="box4">js</div>
+			<div class="box5">js</div>
+		</div>
+	</div>
+	<div class="box2">
+		<div class="box7">
+			<div class="box4">css</div>
+			<div class="box5">css</div>
+		</div>
+	</div>
+	<div class="box3">
+		<div class="box8">
+			<div class="box4">html</div>
+			<div class="box5">html</div>
+		</div>
+	</div>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+				$(".box1").mouseenter(function(){
+					$(".box6").stop().animate({"margin-top":"-100px"},1000);
+				}).mouseleave(function(){
+					$(".box6").stop().animate({"margin-top":"0px"});
+				})
+			})
+		$(document).ready(function(){
+				$(".box2").mouseenter(function(){
+					$(".box7").stop().animate({"margin-top":"-100px"},1000);
+				}).mouseleave(function(){
+					$(".box7").stop().animate({"margin-top":"0px"});
+				})
+			})
+		$(document).ready(function(){
+				$(".box3").mouseenter(function(){
+					$(".box8").stop().animate({"margin-top":"-100px"},1000);
+				}).mouseleave(function(){
+					$(".box8").stop().animate({"margin-top":"0px"});
+				})
+			})
+	</script>
+</body>
+</html>

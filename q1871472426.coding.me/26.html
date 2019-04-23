@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第二十六天</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+	.box{
+		width: 510px;
+		height: 500px;
+		margin:auto;
+		position: relative;
+	}
+		ul{
+			width: 515px;
+			list-style: none;
+			margin:auto;
+		}
+		li{
+			float:left;
+			width: 100px;
+			height: 50px;
+			font-size: 15px;
+			text-align: center;
+			line-height: 50px;
+			border: 1px solid green;
+		}
+		.xin{
+			height: 448px;
+			width: 508px;
+			background: pink;
+			position: absolute;
+			left: 0px;
+			top: 52px;
+			display: none;
+			border: 1px solid green;
+			border-top:pink;
+		}
+		.list{
+			height: 449px;
+			width: 508px;
+			background: pink;
+			position: absolute;
+			left: 0px;
+			top: 52px;
+			display: none;
+			border: 1px solid green;
+			border-top: pink;
+		}
+		.l1{
+			background: pink;
+			border-bottom: 1px solid pink;
+		}
+		#l3{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<ul>
+			<li>
+				<p>新闻</p>
+				<div class="xin l2">新闻：<br>xxxxxxx</div>
+			</li>
+			<li>
+				<p>体育</p>
+				<div class="ti list l2">体育：<br>xxxxxxx</div>
+			</li>
+			<li>
+				<p>娱乐</p>
+				<div class="yu list l2">娱乐：<br>xxxxxxx</div>
+			</li>
+			<li>
+				<p>社会</p>
+				<div class="she list l2">社会：<br>xxxxxxx</div>
+			</li>
+			<li>
+				<p>游戏</p>
+				<div class="you list l2">游戏：<br>xxxxxxx</div>
+			</li>
+		</ul>
+		<div class="box2">
+			
+			
+			
+			
+			
+		</div>
+	</div>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		// $("li").click(function(){
+		// 	var b = $(this).index();
+		// 	$(this).addClass("l1").siblings().removeClass("l1");
+		// 	$(".box2 div").eq(b).addClass("l2").siblings().removeClass("l2");
+		// 		})
+				
+			
+
+			// var i = 0;
+			// var autoPlay = setInterval(function(){
+				$("li").mouseenter(function(){
+			$("p").css({"display":"block"});
+			$(this).addClass("l1").siblings().removeClass("l1");
+			$(this).children("div").slideDown(0).siblings("l2").hide();
+				}).mouseleave(function(){
+					$(this).children("div").stop().slideUp(0);
+					$(this).removeClass("l1");
+				})
+			// 	 i = i + 1;
+			// 	if(i == 5){
+			// 		i = 0;
+			// 	}
+			// 	$("li").eq(i).addClass("l1").siblings().removeClass("l1");
+			// 	$(".box2 div").eq(i).addClass("l2").siblings().removeClass("l2");
+			// },2000)
+	</script>
+</body>
+</html>

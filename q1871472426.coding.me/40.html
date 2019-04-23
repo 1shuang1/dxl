@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第四十天</title>
+	<style>
+			*{
+				margin:0;
+				padding: 0;
+			}
+		.box{
+			width: 410px;
+			margin:0 auto;
+		}
+		ul{
+			float: left;
+			list-style: none;
+		}
+		li{
+			background-image: url("../image/rim.jpg");
+			background-size: 110px;
+			width: 100px;
+			height: 50px;
+			border: 1px solid black;
+		}
+		a{
+			text-decoration: none;
+		}
+		P{
+			display: none;
+			text-align: center;
+			background: black;
+			opacity: 0.6;
+			width: 100px;
+			height: 50px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<ul>
+			<li><p><a href="#">内容</a></p></li>
+			<li><P><a href="#">内容</a></P></li>
+			<li><P><a href="#">内容</a></P></li>
+			<li><P><a href="#">内容</a></P></li>
+		</ul>
+		<ul>
+			<li><P><a href="#">内容</a></P></li>
+			<li><P><a href="#">内容</a></P></li>
+			<li><P><a href="#">内容</a></P></li>
+			<li><P><a href="#">内容</a></P></li>
+		</ul>
+		<ul>
+			<li><P><a href="#">内容</a></P></li>
+			<li><P><a href="#">内容</a></P></li>
+			<li><P><a href="#">内容</a></P></li>
+			<li><P><a href="#">内容</a></P></li>
+		</ul>
+		<ul>
+			<li><P><a href="#">内容</a></P></li>
+			<li><P><a href="#">内容</a></P></li>
+			<li><P><a href="#">内容</a></P></li>
+			<li><P><a href="#">内容</a></P></li>
+		</ul>
+	</div>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	<script>
+		$("li").mouseenter(function(){
+				$(this).find("p").show()
+			}).mouseleave(function(){
+				$(this).find("p").hide()
+			})
+	</script>
+</body>
+</html>
